@@ -1,21 +1,21 @@
 'use client'
 
 const items = [
-  'DESIGN UI/UX',
-  '✦',
-  'DÉVELOPPEMENT WEB',
-  '✦',
-  'NEXT.JS & REACT',
-  '✦',
-  'IDENTITÉ DE MARQUE',
+  'SITES VITRINES',
   '✦',
   'E-COMMERCE',
   '✦',
-  'SEO & PERFORMANCE',
+  'SITES SUR MESURE',
   '✦',
-  'APPLICATIONS WEB',
+  'NEXT.JS & REACT',
   '✦',
-  'CONSEIL DIGITAL',
+  'DESIGN MODERNE',
+  '✦',
+  'SEO INTÉGRÉ',
+  '✦',
+  'RESPONSIVE DESIGN',
+  '✦',
+  'PERFORMANCE WEB',
   '✦',
 ]
 

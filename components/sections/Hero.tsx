@@ -19,7 +19,7 @@ function GeometricShapes() {
 
       {/* Star/asterisk shapes */}
       <svg
-        className="absolute top-48 right-32 lg:right-64 w-6 h-6 text-fuchsia-vgl animate-spin-slow"
+        className="absolute top-48 right-32 lg:right-64 w-6 h-6 text-mauve animate-spin-slow"
         viewBox="0 0 24 24"
         fill="currentColor"
       >
@@ -119,7 +119,7 @@ export function Hero() {
           {/* Pre-badge */}
           <div className="mb-8">
             <Badge variant="purple">
-              <span className="w-1.5 h-1.5 rounded-full bg-lime-vgl inline-block animate-pulse" />
+              <span className="w-1.5 h-1.5 rounded-full bg-citrine inline-block animate-pulse" />
               Agence web — Paris & Remote
             </Badge>
           </div>

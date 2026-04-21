@@ -13,10 +13,9 @@ const budgets = [
 
 const serviceTypes = [
   'Site vitrine',
-  'E-commerce',
-  'Application web',
-  'Design UI/UX',
-  'SEO',
+  'Site e-commerce',
+  'Site sur mesure',
+  'Refonte de site',
   'Autre',
 ]
 
