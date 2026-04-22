@@ -19,8 +19,8 @@ const config: Config = {
           dark: '#B8BFFA',
         },
         citrine: {
-          DEFAULT: '#F4D03F',
-          dark: '#D4AF37',
+          DEFAULT: '#DFFF00',
+          dark: '#BFDF00',
         },
         fuchsia: {
           vgl: '#FF3E8A',

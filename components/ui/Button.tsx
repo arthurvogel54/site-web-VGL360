@@ -25,7 +25,7 @@ export function Button({
     size === 'lg' && 'text-base px-9 py-4',
     variant === 'primary' && [
       'bg-citrine text-dark-DEFAULT',
-      'hover:bg-citrine-dark hover:scale-105 hover:shadow-[0_0_40px_rgba(244,208,63,0.5)]',
+      'hover:bg-citrine-dark hover:scale-105 hover:shadow-[0_0_40px_rgba(223,255,0,0.4)]',
       'active:scale-95',
     ],
     variant === 'secondary' && [

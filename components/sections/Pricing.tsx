@@ -1,84 +1,51 @@
 'use client'
 
-import { useState } from 'react'
 import { Badge } from '@/components/ui/Badge'
-import { Button } from '@/components/ui/Button'
 
 const packs = [
   {
     id: '01',
-    name: 'Essentiel',
-    price: 1500,
-    monthly: 150,
-    monthsCount: 10,
-    tagline: 'Pour démarrer avec un site propre et professionnel.',
-    color: '#D6DAFD',
-    textDark: true,
+    name: 'Pack Standard',
+    price: 2299,
+    tagline: 'La base solide pour votre présence en ligne.',
+    color: '#6341B8',
+    textOnColor: '#fff',
     features: [
-      { label: 'Site vitrine jusqu\'à 5 pages', included: true },
-      { label: 'Design personnalisé', included: true },
-      { label: 'Responsive mobile-first', included: true },
-      { label: 'Formulaire de contact', included: true },
-      { label: 'SEO de base intégré', included: true },
-      { label: 'Déploiement & mise en ligne', included: true },
-      { label: 'Animations & micro-interactions', included: false },
-      { label: 'Blog / actualités', included: false },
-      { label: 'Visite virtuelle Google', included: false },
+      { label: 'Site vitrine complet', star: false },
+      { label: 'Landing Page optimisée', star: false },
+      { label: 'SEO de base intégré', star: false },
+      { label: 'Design Responsive', star: false },
+      { label: 'Formulaire de contact', star: false },
+      { label: 'Déploiement & mise en ligne', star: false },
+      { label: 'SSL & sécurité inclus', star: false },
     ],
-    cta: 'Choisir Essentiel',
+    notIncluded: ['Visite Virtuelle Google 360°', 'Boost référencement local'],
+    cta: 'Choisir Standard',
     popular: false,
   },
   {
     id: '02',
-    name: 'Pro',
-    price: 2000,
-    monthly: 200,
-    monthsCount: 10,
-    tagline: 'Pour aller plus loin avec un site complet et animé.',
-    color: '#6341B8',
-    textDark: false,
+    name: 'Pack Premium Google+',
+    price: 2999,
+    tagline: "L'offre complète pour une visibilité locale maximale.",
+    color: '#DFFF00',
+    textOnColor: '#0A0A0F',
     features: [
-      { label: 'Site vitrine jusqu\'à 10 pages', included: true },
-      { label: 'Design personnalisé premium', included: true },
-      { label: 'Responsive mobile-first', included: true },
-      { label: 'Formulaire de contact avancé', included: true },
-      { label: 'SEO technique complet', included: true },
-      { label: 'Déploiement & mise en ligne', included: true },
-      { label: 'Animations & micro-interactions', included: true },
-      { label: 'Blog / actualités', included: true },
-      { label: 'Visite virtuelle Google', included: false },
+      { label: 'Tout le Pack Standard inclus', star: true },
+      { label: 'Visite Virtuelle Google 360°', star: true },
+      { label: 'Boost référencement local', star: true },
+      { label: 'Intégration Google My Business', star: false },
+      { label: 'Immersion client maximale', star: false },
+      { label: 'Déploiement & mise en ligne', star: false },
+      { label: 'SSL & sécurité inclus', star: false },
     ],
-    cta: 'Choisir Pro',
+    notIncluded: [],
+    cta: 'Choisir Premium Google+',
     popular: true,
-  },
-  {
-    id: '03',
-    name: 'Premium',
-    price: 3000,
-    monthly: 300,
-    monthsCount: 10,
-    tagline: 'L\'offre complète pour une présence en ligne maximale.',
-    color: '#F4D03F',
-    textDark: true,
-    features: [
-      { label: 'Pages illimitées', included: true },
-      { label: 'Design sur mesure haut de gamme', included: true },
-      { label: 'Responsive mobile-first', included: true },
-      { label: 'Formulaire de contact avancé', included: true },
-      { label: 'SEO technique complet', included: true },
-      { label: 'Déploiement & mise en ligne', included: true },
-      { label: 'Animations & micro-interactions', included: true },
-      { label: 'Blog / actualités', included: true },
-      { label: 'Visite virtuelle Google 360°', included: true },
-    ],
-    cta: 'Choisir Premium',
-    popular: false,
   },
 ]
 
 export function Pricing() {
-  const [monthly, setMonthly] = useState(false)
-
   return (
     <section
       id="tarifs"
@@ -90,7 +57,7 @@ export function Pricing() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
 
         {/* Header */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-16">
           <Badge variant="purple" className="mb-6">Tarifs transparents</Badge>
           <h2
             id="pricing-heading"
@@ -101,95 +68,64 @@ export function Pricing() {
             <span className="block text-citrine">PACKS</span>
           </h2>
           <p className="text-white/50 max-w-xl mx-auto text-base leading-relaxed">
-            Des offres claires, sans surprise. Choisissez le pack qui correspond
-            à votre projet et votre budget.
+            Deux offres claires, sans surprise. Choisissez le pack qui correspond à votre ambition.
           </p>
         </div>
 
-        {/* Paiement toggle */}
-        <div className="flex items-center justify-center gap-4 mb-14">
-          <span className={`text-sm font-bold transition-colors duration-200 ${!monthly ? 'text-white' : 'text-white/40'}`}>
-            Paiement unique
-          </span>
-          <button
-            role="switch"
-            aria-checked={monthly}
-            aria-label="Basculer vers le paiement mensuel"
-            onClick={() => setMonthly(!monthly)}
-            className={`relative w-12 h-6 rounded-full transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple ${monthly ? 'bg-purple' : 'bg-dark-border'}`}
-          >
-            <span
-              className={`absolute top-1 left-1 w-4 h-4 rounded-full bg-white transition-transform duration-300 ${monthly ? 'translate-x-6' : 'translate-x-0'}`}
-            />
-          </button>
-          <span className={`text-sm font-bold transition-colors duration-200 ${monthly ? 'text-white' : 'text-white/40'}`}>
-            Paiement mensuel
-          </span>
-          {monthly && (
-            <span className="text-xs font-black bg-purple/20 text-mauve border border-purple/30 px-3 py-1 rounded-full uppercase tracking-wider">
-              Sur 10 mois
-            </span>
-          )}
-        </div>
-
-        {/* Pack cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {/* Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
           {packs.map((pack) => (
             <article
               key={pack.id}
               className={`relative rounded-2xl flex flex-col overflow-hidden transition-all duration-300 ${
                 pack.popular
-                  ? 'ring-2 ring-purple scale-[1.02] shadow-[0_0_60px_rgba(99,65,184,0.25)]'
-                  : 'border border-dark-border hover:border-purple/30'
+                  ? 'ring-2 shadow-[0_0_60px_rgba(223,255,0,0.12)]'
+                  : 'border border-dark-border'
               }`}
+              style={pack.popular ? { ringColor: pack.color, outlineColor: pack.color, boxShadow: '0 0 0 2px #DFFF00, 0 0 60px rgba(223,255,0,0.12)' } : {}}
               aria-label={`Pack ${pack.name}`}
             >
-              {/* Popular badge */}
+              {/* Top banner for popular */}
               {pack.popular && (
                 <div
-                  className="text-center py-2 text-xs font-black uppercase tracking-widest text-white"
-                  style={{ background: pack.color }}
-                  aria-label="Le plus populaire"
+                  className="text-center py-2.5 text-xs font-black uppercase tracking-widest"
+                  style={{ background: pack.color, color: pack.textOnColor }}
                 >
-                  ★ Le plus populaire
+                  ★ Recommandé — Notre meilleure offre
                 </div>
               )}
 
               <div className="bg-dark-card flex flex-col flex-1 p-8 gap-8">
-                {/* Pack name & price */}
+
+                {/* Pack number + name */}
                 <div>
-                  {/* Number accent */}
                   <div
-                    className="text-6xl font-black leading-none mb-4 opacity-15"
-                    style={{ color: pack.color }}
+                    className="text-7xl font-black leading-none mb-4 select-none"
+                    style={{ color: pack.color, opacity: 0.1 }}
                     aria-hidden="true"
                   >
                     {pack.id}
                   </div>
 
                   <div
-                    className="inline-block text-xs font-black uppercase tracking-widest px-3 py-1 rounded-full mb-3"
-                    style={{ color: pack.textDark ? '#0A0A0F' : '#fff', background: pack.color }}
+                    className="inline-flex items-center gap-2 text-xs font-black uppercase tracking-widest px-4 py-1.5 rounded-full mb-5"
+                    style={{ background: pack.color, color: pack.textOnColor }}
                   >
+                    {pack.popular && (
+                      <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M12 0l2.4 9.6L24 12l-9.6 2.4L12 24l-2.4-9.6L0 12l9.6-2.4z"/>
+                      </svg>
+                    )}
                     {pack.name}
                   </div>
 
-                  <div className="flex items-end gap-2 mt-4 mb-1">
-                    <span className="text-5xl font-black text-white leading-none">
-                      {monthly ? pack.monthly : pack.price}€
+                  <div className="flex items-end gap-2 mb-1">
+                    <span className="text-6xl font-black text-white leading-none">
+                      {pack.price.toLocaleString('fr-FR')}€
                     </span>
-                    <span className="text-white/40 text-sm mb-1 font-medium">
-                      {monthly ? '/ mois' : 'HT'}
-                    </span>
+                    <span className="text-white/40 text-sm mb-1.5 font-medium">HT</span>
                   </div>
-                  {monthly && (
-                    <p className="text-white/30 text-xs">
-                      soit {pack.price}€ sur {pack.monthsCount} mois — sans intérêt
-                    </p>
-                  )}
-                  <p className="text-white/50 text-sm leading-relaxed mt-3">
-                    {pack.tagline}
-                  </p>
+                  <p className="text-white/40 text-sm leading-relaxed">{pack.tagline}</p>
                 </div>
 
                 {/* Features */}
@@ -197,18 +133,28 @@ export function Pricing() {
                   {pack.features.map((feature) => (
                     <li
                       key={feature.label}
-                      className={`flex items-start gap-3 text-sm ${feature.included ? 'text-white/80' : 'text-white/25 line-through decoration-white/15'}`}
+                      className={`flex items-start gap-3 text-sm ${feature.star ? 'text-white font-semibold' : 'text-white/70'}`}
                     >
                       <span
-                        className={`mt-0.5 w-4 h-4 rounded-full flex items-center justify-center flex-shrink-0 text-[10px] font-black ${
-                          feature.included ? '' : 'bg-white/5'
-                        }`}
-                        style={feature.included ? { background: pack.color, color: pack.textDark ? '#0A0A0F' : '#fff' } : {}}
+                        className="mt-0.5 w-4 h-4 rounded-full flex items-center justify-center flex-shrink-0 text-[10px] font-black"
+                        style={{ background: pack.color, color: pack.textOnColor }}
                         aria-hidden="true"
                       >
-                        {feature.included ? '✓' : ''}
+                        ✓
                       </span>
                       {feature.label}
+                    </li>
+                  ))}
+                  {pack.notIncluded.map((label) => (
+                    <li
+                      key={label}
+                      className="flex items-start gap-3 text-sm text-white/20 line-through decoration-white/10"
+                    >
+                      <span
+                        className="mt-0.5 w-4 h-4 rounded-full flex items-center justify-center flex-shrink-0 bg-white/5"
+                        aria-hidden="true"
+                      />
+                      {label}
                     </li>
                   ))}
                 </ul>
@@ -216,28 +162,40 @@ export function Pricing() {
                 {/* CTA */}
                 <a
                   href="#contact"
-                  className="mt-4 w-full flex items-center justify-center gap-2 py-3.5 px-6 rounded-full font-black uppercase tracking-wider text-sm transition-all duration-300 hover:scale-105 hover:shadow-lg active:scale-95"
-                  style={{
-                    background: pack.color,
-                    color: pack.textDark ? '#0A0A0F' : '#fff',
-                  }}
-                  aria-label={`${pack.cta} — ${monthly ? pack.monthly + '€/mois' : pack.price + '€'}`}
+                  className="w-full flex items-center justify-center gap-2 py-4 px-6 rounded-full font-black uppercase tracking-wider text-sm transition-all duration-300 hover:scale-105 active:scale-95"
+                  style={{ background: pack.color, color: pack.textOnColor }}
+                  aria-label={`${pack.cta} — ${pack.price.toLocaleString('fr-FR')}€ HT`}
                 >
                   {pack.cta}
                   <svg className="w-4 h-4" viewBox="0 0 16 16" fill="none" aria-hidden="true">
                     <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                 </a>
+
+                {/* Premium 360° badge */}
+                {pack.popular && (
+                  <div className="flex items-center gap-3 pt-2 border-t border-dark-border">
+                    <div
+                      className="w-10 h-10 rounded-full flex items-center justify-center text-xs font-black border-2 flex-shrink-0"
+                      style={{ borderColor: '#DFFF00', color: '#DFFF00' }}
+                      aria-hidden="true"
+                    >
+                      360°
+                    </div>
+                    <p className="text-xs text-white/30 leading-tight">
+                      Technologie de visite immersive certifiée Google Street View
+                    </p>
+                  </div>
+                )}
               </div>
             </article>
           ))}
         </div>
 
-        {/* Footer note */}
-        <p className="text-center text-white/30 text-xs mt-10 max-w-xl mx-auto leading-relaxed">
-          Tous les tarifs sont indicatifs et peuvent varier selon la complexité du projet.
-          Le paiement mensuel s'étale sur 10 mois sans frais supplémentaires.
-          Un devis personnalisé vous sera fourni après échange.
+        {/* Separator note */}
+        <p className="text-center text-white/25 text-xs mt-10 max-w-xl mx-auto leading-relaxed">
+          Tarifs indicatifs HT. Un devis personnalisé vous sera remis après échange.
+          Paiement possible en plusieurs fois sur demande.
         </p>
       </div>
     </section>
