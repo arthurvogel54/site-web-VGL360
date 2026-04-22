@@ -3,7 +3,7 @@
 const currentYear = new Date().getFullYear()
 
 const links = {
-  Services: ['Site vitrine', 'E-commerce', 'Application web', 'Design UI/UX', 'SEO & Performance', 'Maintenance'],
+  Services: ['Site vitrine', 'Site e-commerce', 'Site sur mesure', 'Refonte de site'],
   Agence: ['Notre approche', 'Pourquoi VGL360', 'Processus', 'Contact'],
   Légal: ['Mentions légales', 'Politique de confidentialité', 'CGV'],
 }
