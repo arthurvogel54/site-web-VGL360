@@ -4,7 +4,11 @@ import { Badge } from '@/components/ui/Badge'
 
 const packs = [
   {
-    medal: '🥉',
+    medalIcon: (
+      <svg className="w-10 h-10" viewBox="0 0 24 24" fill="none">
+        <path d="M12 3L20 7V13C20 17.4 16.5 21.4 12 23C7.5 21.4 4 17.4 4 13V7L12 3Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+      </svg>
+    ),
     tier: 'Bronze',
     name: 'Pack VITRINE',
     price: 1490,
@@ -29,7 +33,11 @@ const packs = [
     cta: 'Choisir VITRINE',
   },
   {
-    medal: '🥈',
+    medalIcon: (
+      <svg className="w-10 h-10" viewBox="0 0 24 24" fill="none">
+        <path d="M12 2l3 6.5 7 1-5 5 1.2 7-6.2-3.3L5.8 21.5 7 14.5 2 9.5l7-1L12 2z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+      </svg>
+    ),
     tier: 'Argent',
     name: 'Pack NOTORIÉTÉ',
     price: 2490,
@@ -54,7 +62,11 @@ const packs = [
     cta: 'Choisir NOTORIÉTÉ',
   },
   {
-    medal: '🥇',
+    medalIcon: (
+      <svg className="w-10 h-10" viewBox="0 0 24 24" fill="none">
+        <path d="M3 20h18M3 20L6 9l5 5 3-8 3 8 5-5-3 11H3z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+      </svg>
+    ),
     tier: 'Or',
     name: 'Pack IMMERSION',
     price: 3490,
@@ -120,7 +132,7 @@ export function Pricing() {
               {/* Top banner for best pack */}
               {pack.popular && (
                 <div className="text-center py-2.5 text-xs font-black uppercase tracking-widest text-white bg-white/15">
-                  {pack.medal} Notre meilleure offre
+                  Notre meilleure offre
                 </div>
               )}
 
@@ -128,7 +140,9 @@ export function Pricing() {
 
                 {/* Medal + tier */}
                 <div className="flex items-center gap-3">
-                  <span className="text-4xl" aria-hidden="true">{pack.medal}</span>
+                  <span className={`flex-shrink-0 ${pack.popular ? 'text-white' : 'text-purple'}`} aria-hidden="true">
+                    {pack.medalIcon}
+                  </span>
                   <div>
                     <div className={`text-xs font-black uppercase tracking-widest ${pack.popular ? 'text-white/60' : 'text-ink-muted'}`}>
                       {pack.tier}

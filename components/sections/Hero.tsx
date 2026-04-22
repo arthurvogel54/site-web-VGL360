@@ -210,16 +210,27 @@ export function Hero() {
 
             {/* Engagements */}
             <div className="mt-12 flex flex-wrap gap-8 border-t border-light-border pt-8">
-              {[
-                { icon: '⚡', label: 'Réponse sous 24h' },
-                { icon: '🎯', label: '100% sur mesure' },
-                { icon: '🌐', label: 'Certifié Google 360°' },
-              ].map((item) => (
-                <div key={item.label} className="flex items-center gap-2">
-                  <span className="text-xl">{item.icon}</span>
-                  <div className="text-sm font-bold text-ink-soft">{item.label}</div>
-                </div>
-              ))}
+              <div className="flex items-center gap-2">
+                <svg className="w-5 h-5 text-purple flex-shrink-0" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                  <path d="M11 2L4 12h6l-1 6 7-10h-6l1-6z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+                <div className="text-sm font-bold text-ink-soft">Réponse sous 24h</div>
+              </div>
+              <div className="flex items-center gap-2">
+                <svg className="w-5 h-5 text-purple flex-shrink-0" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                  <circle cx="10" cy="10" r="8" stroke="currentColor" strokeWidth="1.5"/>
+                  <circle cx="10" cy="10" r="4" stroke="currentColor" strokeWidth="1.5"/>
+                  <circle cx="10" cy="10" r="1.5" fill="currentColor"/>
+                </svg>
+                <div className="text-sm font-bold text-ink-soft">100% sur mesure</div>
+              </div>
+              <div className="flex items-center gap-2">
+                <svg className="w-5 h-5 text-purple flex-shrink-0" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                  <circle cx="10" cy="10" r="8" stroke="currentColor" strokeWidth="1.5"/>
+                  <path d="M10 2C10 2 7 6 7 10s3 8 3 8M10 2c0 0 3 4 3 8s-3 8-3 8M2 10h16" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round"/>
+                </svg>
+                <div className="text-sm font-bold text-ink-soft">Certifié Google 360°</div>
+              </div>
             </div>
           </div>
 

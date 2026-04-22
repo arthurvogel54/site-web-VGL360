@@ -4,22 +4,41 @@ import { Badge } from '@/components/ui/Badge'
 
 const whys = [
   {
-    icon: '⚡',
+    icon: (
+      <svg className="w-6 h-6 text-purple" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+        <path d="M11 2L4 12h6l-1 6 7-10h-6l1-6z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+      </svg>
+    ),
     title: 'Livraison rapide',
     desc: 'Processus structuré pour tenir les délais. Site complet livré en 2 à 4 semaines selon la complexité.',
   },
   {
-    icon: '🎨',
+    icon: (
+      <svg className="w-6 h-6 text-purple" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+        <path d="M15 4l1 1-9 9H5v-2l9-9z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+        <path d="M13 6l1 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+      </svg>
+    ),
     title: 'Design unique',
     desc: 'Chaque site est créé sur mesure, pas de template générique. Votre identité visuelle, votre personnalité.',
   },
   {
-    icon: '📈',
+    icon: (
+      <svg className="w-6 h-6 text-purple" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+        <path d="M3 14l4-4 3 3 6-7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+        <path d="M14 6h3v3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+      </svg>
+    ),
     title: 'Orienté résultats',
     desc: "Chaque décision de design est guidée par vos objectifs. Des sites conçus pour convertir.",
   },
   {
-    icon: '🌐',
+    icon: (
+      <svg className="w-6 h-6 text-purple" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+        <circle cx="10" cy="10" r="8" stroke="currentColor" strokeWidth="1.5"/>
+        <path d="M10 2C10 2 7 6 7 10s3 8 3 8M10 2c0 0 3 4 3 8s-3 8-3 8M2 10h16" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round"/>
+      </svg>
+    ),
     title: 'Exclusif 360°',
     desc: "L'intégration de Visite Virtuelle Google certifiée dans votre région. Un avantage concurrentiel unique.",
   },
@@ -63,7 +82,7 @@ export function Process() {
               aria-label={item.title}
             >
               <div
-                className="w-12 h-12 flex-shrink-0 rounded-2xl bg-light-soft flex items-center justify-center text-2xl group-hover:scale-110 transition-transform duration-300"
+                className="w-12 h-12 flex-shrink-0 rounded-2xl bg-light-soft flex items-center justify-center group-hover:scale-110 transition-transform duration-300"
                 aria-hidden="true"
               >
                 {item.icon}

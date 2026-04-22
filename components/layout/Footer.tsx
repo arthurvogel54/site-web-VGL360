@@ -3,9 +3,23 @@
 const currentYear = new Date().getFullYear()
 
 const links = {
-  Services: ['Site vitrine', 'Landing Page', 'Visite Virtuelle 360°', 'Refonte de site'],
-  Agence: ['À Propos', 'Pourquoi VGL360', 'Tarifs', 'Contact'],
-  Légal: ['Mentions légales', 'Politique de confidentialité', 'CGV'],
+  Services: [
+    { label: 'Site vitrine', href: '/#services' },
+    { label: 'Landing Page', href: '/#services' },
+    { label: 'Visite Virtuelle 360°', href: '/#services' },
+    { label: 'Refonte de site', href: '/#contact' },
+  ],
+  Agence: [
+    { label: 'À Propos', href: '/#apropos' },
+    { label: 'Pourquoi VGL360', href: '/#pourquoi' },
+    { label: 'Tarifs', href: '/#tarifs' },
+    { label: 'Contact', href: '/#contact' },
+  ],
+  Légal: [
+    { label: 'Mentions légales', href: '/mentions-legales' },
+    { label: 'Politique de confidentialité', href: '/politique-de-confidentialite' },
+    { label: 'CGV', href: '/cgv' },
+  ],
 }
 
 export function Footer() {
@@ -48,12 +62,12 @@ export function Footer() {
             </h3>
             <ul className="flex flex-col gap-3" role="list">
               {items.map((item) => (
-                <li key={item}>
+                <li key={item.label}>
                   <a
-                    href="#"
+                    href={item.href}
                     className="text-sm text-white/50 hover:text-white transition-colors duration-200"
                   >
-                    {item}
+                    {item.label}
                   </a>
                 </li>
               ))}

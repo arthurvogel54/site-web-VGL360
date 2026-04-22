@@ -4,10 +4,42 @@ import { Badge } from '@/components/ui/Badge'
 import { Button } from '@/components/ui/Button'
 
 const values = [
-  { icon: '⚡', label: 'Rapidité de livraison' },
-  { icon: '🎯', label: 'Design sur mesure' },
-  { icon: '🔍', label: 'SEO intégré dès le départ' },
-  { icon: '🌐', label: 'Innovation 360°' },
+  {
+    icon: (
+      <svg className="w-5 h-5 text-purple flex-shrink-0" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+        <path d="M11 2L4 12h6l-1 6 7-10h-6l1-6z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+      </svg>
+    ),
+    label: 'Rapidité de livraison',
+  },
+  {
+    icon: (
+      <svg className="w-5 h-5 text-purple flex-shrink-0" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+        <circle cx="10" cy="10" r="8" stroke="currentColor" strokeWidth="1.5"/>
+        <circle cx="10" cy="10" r="4" stroke="currentColor" strokeWidth="1.5"/>
+        <circle cx="10" cy="10" r="1.5" fill="currentColor"/>
+      </svg>
+    ),
+    label: 'Design sur mesure',
+  },
+  {
+    icon: (
+      <svg className="w-5 h-5 text-purple flex-shrink-0" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+        <circle cx="9" cy="9" r="6" stroke="currentColor" strokeWidth="1.5"/>
+        <path d="M14 14l4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+      </svg>
+    ),
+    label: 'SEO intégré dès le départ',
+  },
+  {
+    icon: (
+      <svg className="w-5 h-5 text-purple flex-shrink-0" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+        <circle cx="10" cy="10" r="8" stroke="currentColor" strokeWidth="1.5"/>
+        <path d="M10 2C10 2 7 6 7 10s3 8 3 8M10 2c0 0 3 4 3 8s-3 8-3 8M2 10h16" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round"/>
+      </svg>
+    ),
+    label: 'Innovation 360°',
+  },
 ]
 
 const skills = [
@@ -134,7 +166,7 @@ export function Approach() {
                   key={v.label}
                   className="flex items-center gap-3 bg-white border border-light-border rounded-2xl p-3.5 card-shadow"
                 >
-                  <span className="text-lg flex-shrink-0">{v.icon}</span>
+                  {v.icon}
                   <span className="text-xs font-bold text-ink-soft leading-tight">{v.label}</span>
                 </div>
               ))}
