@@ -4,6 +4,7 @@ import { Hero } from '@/components/sections/Hero'
 import { Marquee } from '@/components/sections/Marquee'
 import { Approach } from '@/components/sections/Approach'
 import { Services } from '@/components/sections/Services'
+import { Pricing } from '@/components/sections/Pricing'
 import { Process } from '@/components/sections/Process'
 import { Contact } from '@/components/sections/Contact'
 
@@ -14,8 +15,9 @@ export default function Home() {
       <main id="main-content">
         <Hero />
         <Marquee />
-        <Approach />
         <Services />
+        <Pricing />
+        <Approach />
         <Process />
         <Contact />
       </main>

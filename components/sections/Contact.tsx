@@ -79,19 +79,19 @@ export function Contact() {
             {/* Contact info */}
             <div className="flex flex-col gap-5">
               <a
-                href="mailto:hello@vgl360.com"
+                href="mailto:easy.vgl360@gmail.com"
                 className="flex items-center gap-4 group text-white/60 hover:text-white transition-colors duration-200"
-                aria-label="Envoyer un email à hello@vgl360.com"
+                aria-label="Envoyer un email à easy.vgl360@gmail.com"
               >
                 <div className="w-10 h-10 rounded-xl bg-purple/15 flex items-center justify-center group-hover:bg-purple/30 transition-colors duration-200 flex-shrink-0">
                   <svg className="w-5 h-5 text-mauve" viewBox="0 0 20 20" fill="none" aria-hidden="true">
                     <path d="M3 5h14l-7 7-7-7zM3 5v10h14V5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                 </div>
-                <span className="font-medium">hello@vgl360.com</span>
+                <span className="font-medium">easy.vgl360@gmail.com</span>
               </a>
               <a
-                href="tel:+33612345678"
+                href="tel:+33757631254"
                 className="flex items-center gap-4 group text-white/60 hover:text-white transition-colors duration-200"
                 aria-label="Appeler VGL360"
               >
@@ -100,8 +100,16 @@ export function Contact() {
                     <path d="M5 3C5 3 4 4 4 6c0 6 6 12 12 12 2 0 3-1 3-1l-2-4-2 1s-2-1-4-3-3-4-3-4l1-2L5 3z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round"/>
                   </svg>
                 </div>
-                <span className="font-medium">+33 6 12 34 56 78</span>
+                <span className="font-medium">07 57 63 12 54</span>
               </a>
+              <div className="flex items-center gap-4 text-white/60">
+                <div className="w-10 h-10 rounded-xl bg-purple/15 flex items-center justify-center flex-shrink-0">
+                  <svg className="w-5 h-5 text-mauve" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                    <path d="M10 2C7.24 2 5 4.24 5 7c0 4 5 11 5 11s5-7 5-11c0-2.76-2.24-5-5-5zm0 6.5A1.5 1.5 0 1 1 10 5a1.5 1.5 0 0 1 0 3z" fill="currentColor" opacity="0.7"/>
+                  </svg>
+                </div>
+                <span className="font-medium">Toulouse, France</span>
+              </div>
             </div>
 
             {/* Bold accent */}

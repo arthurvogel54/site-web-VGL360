@@ -5,9 +5,9 @@ import { Button } from '@/components/ui/Button'
 import { clsx } from 'clsx'
 
 const navLinks = [
-  { label: 'Approche', href: '#approche' },
   { label: 'Services', href: '#services' },
-  { label: 'Processus', href: '#processus' },
+  { label: 'Tarifs', href: '#tarifs' },
+  { label: 'Approche', href: '#approche' },
   { label: 'Contact', href: '#contact' },
 ]
 
