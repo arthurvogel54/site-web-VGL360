@@ -208,16 +208,16 @@ export function Hero() {
               </Button>
             </div>
 
-            {/* Stats */}
-            <div className="mt-12 flex gap-10 border-t border-light-border pt-8">
+            {/* Engagements */}
+            <div className="mt-12 flex flex-wrap gap-8 border-t border-light-border pt-8">
               {[
-                { value: '50+', label: 'Projets livrés' },
-                { value: '98%', label: 'Clients satisfaits' },
-                { value: '24h', label: 'Support réactif' },
-              ].map((stat) => (
-                <div key={stat.label}>
-                  <div className="text-3xl font-black text-purple leading-none">{stat.value}</div>
-                  <div className="text-xs text-ink-muted uppercase tracking-wider mt-1 font-medium">{stat.label}</div>
+                { icon: '⚡', label: 'Réponse sous 24h' },
+                { icon: '🎯', label: '100% sur mesure' },
+                { icon: '🌐', label: 'Certifié Google 360°' },
+              ].map((item) => (
+                <div key={item.label} className="flex items-center gap-2">
+                  <span className="text-xl">{item.icon}</span>
+                  <div className="text-sm font-bold text-ink-soft">{item.label}</div>
                 </div>
               ))}
             </div>
