@@ -14,20 +14,44 @@ const features = [
         <path d="M10 20h12M10 25h8" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
       </svg>
     ),
-    title: 'Site Vitrine Complet',
-    desc: 'Pages de présentation élégantes qui convertissent vos visiteurs en clients. Design sur mesure, identité visuelle forte.',
-    premium: false,
+    title: 'Site Hero & Prestations',
+    desc: 'Une photo d\'impact, un titre qui donne envie, et vos produits ou services phares mis en avant avec clarté.',
+    pack: 'Vitrine',
   },
   {
     icon: (
       <svg viewBox="0 0 40 40" fill="none" className="w-9 h-9" aria-hidden="true">
-        <path d="M8 32V16l12-8 12 8v16" stroke="currentColor" strokeWidth="2" strokeLinejoin="round"/>
-        <rect x="15" y="22" width="10" height="10" rx="1" stroke="currentColor" strokeWidth="2"/>
+        <path d="M20 8l4 12h12l-10 7 4 12-10-7-10 7 4-12L4 20h12z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round"/>
       </svg>
     ),
-    title: 'Landing Page Optimisée',
-    desc: 'Page unique dédiée à convertir — campagnes publicitaires, lancement de produit ou capture de leads.',
-    premium: false,
+    title: 'Témoignages & Social Proof',
+    desc: 'Module avis clients intégré pour instaurer la confiance et convaincre les visiteurs avant même qu\'ils appellent.',
+    pack: 'Vitrine',
+  },
+  {
+    icon: (
+      <svg viewBox="0 0 40 40" fill="none" className="w-9 h-9" aria-hidden="true">
+        <rect x="6" y="6" width="28" height="28" rx="14" stroke="currentColor" strokeWidth="2"/>
+        <path d="M20 14v6l4 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        <path d="M8 20h4M28 20h4M20 8v4M20 28v4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+      </svg>
+    ),
+    title: 'CTA Mobile + Carte Maps',
+    desc: 'Bouton "Appeler" ou "Itinéraire" bien visible sur mobile, et carte Google Maps interactive pour guider vos clients.',
+    pack: 'Vitrine',
+  },
+  {
+    icon: (
+      <svg viewBox="0 0 40 40" fill="none" className="w-9 h-9" aria-hidden="true">
+        <rect x="4" y="4" width="14" height="14" rx="2" stroke="currentColor" strokeWidth="2"/>
+        <rect x="22" y="4" width="14" height="14" rx="2" stroke="currentColor" strokeWidth="2"/>
+        <rect x="4" y="22" width="14" height="14" rx="2" stroke="currentColor" strokeWidth="2"/>
+        <rect x="22" y="22" width="14" height="14" rx="2" stroke="currentColor" strokeWidth="2"/>
+      </svg>
+    ),
+    title: 'Architecture Multi-Pages',
+    desc: '4 pages dédiées : Accueil, Produits/Services, À Propos/Savoir-faire et Contact avec horaires & accès.',
+    pack: 'Notoriété',
   },
   {
     icon: (
@@ -37,20 +61,9 @@ const features = [
         <path d="M6 20h28" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
       </svg>
     ),
-    title: 'SEO de Base',
-    desc: 'Structure technique, balises méta et vitesse de chargement optimisés pour être trouvé sur Google dès le lancement.',
-    premium: false,
-  },
-  {
-    icon: (
-      <svg viewBox="0 0 40 40" fill="none" className="w-9 h-9" aria-hidden="true">
-        <rect x="4" y="8" width="22" height="18" rx="2" stroke="currentColor" strokeWidth="2"/>
-        <rect x="14" y="20" width="22" height="14" rx="2" stroke="currentColor" strokeWidth="2"/>
-      </svg>
-    ),
-    title: 'Design Responsive',
-    desc: 'Rendu parfait sur mobile, tablette et desktop. Aucun client ne vous échappe quelle que soit la taille de son écran.',
-    premium: false,
+    title: 'SEO Local Multi-Mots Clés',
+    desc: 'Chaque page optimisée sur un mot-clé différent — plus de chances d\'apparaître sur Google pour vos clients locaux.',
+    pack: 'Notoriété',
   },
   {
     icon: (
@@ -61,29 +74,16 @@ const features = [
       </svg>
     ),
     title: 'Visite Virtuelle Google 360°',
-    desc: 'Immersion totale intégrée à votre fiche Google. Boostez votre référencement local et faites visiter vos locaux 24h/24.',
-    premium: true,
-  },
-  {
-    icon: (
-      <svg viewBox="0 0 40 40" fill="none" className="w-9 h-9" aria-hidden="true">
-        <path d="M20 6l3.5 10.5L34 20l-10.5 3.5L20 34l-3.5-10.5L6 20l10.5-3.5L20 6z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round"/>
-      </svg>
-    ),
-    title: 'Boost Référencement Local',
-    desc: 'Optimisation de votre présence Google My Business pour dominer les recherches locales et attirer plus de clients.',
-    premium: true,
+    desc: 'Le client entre dans votre boutique sans bouger. Immersion totale intégrée au site et à votre fiche Google.',
+    pack: 'Immersion',
   },
 ]
 
-const included = [
-  'Design personnalisé aux couleurs de votre marque',
-  'Formulaire de contact fonctionnel',
-  'Déploiement & mise en ligne inclus',
-  'Hébergement haute performance',
-  'SSL (HTTPS) & sécurité inclus',
-  'Support & maintenance 3 mois offerts',
-]
+const packColors: Record<string, string> = {
+  Vitrine: 'bg-mauve/40 text-purple border-mauve',
+  Notoriété: 'bg-purple/10 text-purple border-purple/20',
+  Immersion: 'bg-purple text-white border-purple',
+}
 
 export function Services() {
   return (
@@ -107,8 +107,8 @@ export function Services() {
               <span className="block text-purple">DE SITES WEB</span>
             </h2>
             <p className="text-ink-soft max-w-sm lg:text-right text-base leading-relaxed">
-              Un seul service, maîtrisé de A à Z — du design à la mise en ligne,
-              avec l'option exclusive de la Visite Virtuelle Google 360°.
+              De la vitrine locale à l'immersion 360°, chaque fonctionnalité est pensée
+              pour attirer plus de clients près de chez vous.
             </p>
           </div>
         </div>
@@ -118,65 +118,34 @@ export function Services() {
           {features.map((feature) => (
             <article
               key={feature.title}
-              className={`group relative rounded-3xl p-7 flex flex-col gap-5 bg-white transition-all duration-300 card-shadow card-shadow-hover cursor-default ${
-                feature.premium ? 'border-2 border-purple/20' : 'border border-light-border'
-              }`}
+              className="group relative rounded-3xl p-7 flex flex-col gap-5 bg-white border border-light-border card-shadow card-shadow-hover transition-all duration-300"
               aria-label={feature.title}
             >
-              {feature.premium && (
-                <span
-                  className="absolute top-4 right-4 text-[9px] font-black uppercase tracking-widest px-2.5 py-1 rounded-full bg-purple text-white"
-                >
-                  Premium
-                </span>
-              )}
-
-              <div
-                className={`w-14 h-14 rounded-2xl flex items-center justify-center transition-transform duration-300 group-hover:scale-110 ${
-                  feature.premium
-                    ? 'bg-purple/10 text-purple'
-                    : 'bg-light-soft text-purple'
-                }`}
+              {/* Pack badge */}
+              <span
+                className={`absolute top-4 right-4 text-[9px] font-black uppercase tracking-widest px-2.5 py-1 rounded-full border ${packColors[feature.pack]}`}
               >
+                {feature.pack}
+              </span>
+
+              {/* Icon */}
+              <div className="w-14 h-14 rounded-2xl flex items-center justify-center bg-light-soft text-purple transition-transform duration-300 group-hover:scale-110">
                 {feature.icon}
               </div>
 
               <div className="flex flex-col gap-2">
-                <h3 className="text-base font-black text-ink leading-tight">{feature.title}</h3>
+                <h3 className="text-base font-black text-ink leading-tight pr-14">{feature.title}</h3>
                 <p className="text-sm text-ink-soft leading-relaxed">{feature.desc}</p>
               </div>
             </article>
           ))}
         </div>
 
-        {/* Included block */}
-        <div className="rounded-3xl p-8 lg:p-10 bg-white border border-light-border card-shadow mb-12">
-          <div className="mb-6">
-            <h3 className="text-xs font-black uppercase tracking-widest text-ink-muted mb-1">Inclus dans chaque projet</h3>
-            <p className="text-ink font-bold text-lg">Pas de mauvaise surprise — tout est compris.</p>
-          </div>
-          <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4" role="list">
-            {included.map((item) => (
-              <li key={item} className="flex items-start gap-3 text-sm text-ink-soft">
-                <span
-                  className="mt-0.5 w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 bg-purple/10"
-                  aria-hidden="true"
-                >
-                  <svg className="w-3 h-3 text-purple" viewBox="0 0 12 12" fill="none">
-                    <path d="M2 6l3 3 5-5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </span>
-                {item}
-              </li>
-            ))}
-          </ul>
-        </div>
-
         {/* CTA row */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-6 pt-4">
           <p className="text-ink-muted text-sm">Vous avez un projet en tête ? Parlons-en, c'est gratuit.</p>
-          <Button as="a" href="#contact" variant="primary">
-            Demander un devis gratuit
+          <Button as="a" href="#tarifs" variant="primary">
+            Voir les packs & tarifs
             <svg className="w-4 h-4" viewBox="0 0 16 16" fill="none" aria-hidden="true">
               <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
