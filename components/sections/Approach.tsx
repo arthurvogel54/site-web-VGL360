@@ -1,5 +1,6 @@
 'use client'
 
+import { useState } from 'react'
 import { Badge } from '@/components/ui/Badge'
 import { Button } from '@/components/ui/Button'
 
@@ -50,6 +51,8 @@ const skills = [
 ]
 
 export function Approach() {
+  const [photoError, setPhotoError] = useState(false)
+
   return (
     <section
       id="apropos"
@@ -97,11 +100,22 @@ export function Approach() {
                   boxShadow: '0 20px 60px rgba(99,65,184,0.15)',
                 }}
               >
-                <img
-                  src="/photo.png"
-                  alt="Fondateur VGL360"
-                  className="w-full h-full object-cover object-top"
-                />
+                {photoError ? (
+                  <div className="w-full h-full flex flex-col items-center justify-center bg-light-card gap-4">
+                    <svg className="w-16 h-16 text-purple/30" viewBox="0 0 24 24" fill="none">
+                      <circle cx="12" cy="8" r="4" stroke="currentColor" strokeWidth="1.5"/>
+                      <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+                    </svg>
+                    <span className="text-xs text-ink-muted font-medium">Photo à venir</span>
+                  </div>
+                ) : (
+                  <img
+                    src="/photo.png"
+                    alt="Fondateur VGL360"
+                    className="w-full h-full object-cover object-top"
+                    onError={() => setPhotoError(true)}
+                  />
+                )}
                 <div
                   aria-hidden="true"
                   className="absolute bottom-0 left-0 right-0 h-24 pointer-events-none"

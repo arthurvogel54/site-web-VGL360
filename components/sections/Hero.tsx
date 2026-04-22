@@ -167,16 +167,16 @@ export function Hero() {
             {/* 3-line headline */}
             <h1 className="font-black uppercase tracking-tight leading-none mb-8">
               <span
-                className="block text-ink"
-                style={{ fontSize: 'clamp(2.8rem, 8vw, 7rem)', lineHeight: '0.95' }}
+                className="block text-ink whitespace-nowrap"
+                style={{ fontSize: 'clamp(1.8rem, 5.8vw, 4.5rem)', lineHeight: '1' }}
               >
                 LE SITE WEB
               </span>
               <span
-                className="block"
+                className="block whitespace-nowrap"
                 style={{
-                  fontSize: 'clamp(2.8rem, 8vw, 7rem)',
-                  lineHeight: '0.95',
+                  fontSize: 'clamp(1.5rem, 4.2vw, 3.3rem)',
+                  lineHeight: '1.05',
                   WebkitTextStroke: '2px #6341B8',
                   color: 'transparent',
                 }}
@@ -184,8 +184,8 @@ export function Hero() {
                 QUI DONNE ENVIE
               </span>
               <span
-                className="block text-purple"
-                style={{ fontSize: 'clamp(2.8rem, 8vw, 7rem)', lineHeight: '0.95' }}
+                className="block text-purple whitespace-nowrap"
+                style={{ fontSize: 'clamp(1rem, 2.8vw, 2.2rem)', lineHeight: '1.1' }}
               >
                 DE POUSSER VOTRE PORTE.
               </span>
