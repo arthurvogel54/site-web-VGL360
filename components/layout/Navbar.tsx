@@ -36,13 +36,12 @@ export function Navbar() {
         className="max-w-7xl mx-auto px-6 lg:px-8 h-16 flex items-center justify-between"
       >
         {/* Logo */}
-        <a href="#" aria-label="VGL360 — Accueil" className="flex items-center gap-2 group">
-          <div className="w-8 h-8 rounded-xl bg-purple flex items-center justify-center group-hover:bg-purple-dark transition-colors duration-300">
-            <span className="text-white font-black text-xs">V</span>
-          </div>
-          <span className="font-black text-ink text-lg tracking-tight">
-            VGL<span className="text-purple">360</span>
-          </span>
+        <a href="#" aria-label="VGL360 — Accueil" className="flex items-center group">
+          <img
+            src="/logo.png"
+            alt="VGL360"
+            className="h-12 w-auto object-contain"
+          />
         </a>
 
         {/* Desktop nav */}

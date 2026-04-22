@@ -152,6 +152,13 @@ export function Hero() {
         style={{ background: 'radial-gradient(circle, rgba(99,65,184,0.05) 0%, transparent 70%)' }}
       />
 
+      {/* Star decoration — logo signature */}
+      <div aria-hidden="true" className="absolute top-24 left-6 lg:left-10 text-purple/20 pointer-events-none animate-spin-slow">
+        <svg className="w-14 h-14" viewBox="0 0 100 100" fill="currentColor">
+          <path d="M50 4 Q58 30 83 17 Q70 42 96 50 Q70 58 83 83 Q58 70 50 96 Q42 70 17 83 Q30 58 4 50 Q30 42 17 17 Q42 30 50 4 Z"/>
+        </svg>
+      </div>
+
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 py-20 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 

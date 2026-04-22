@@ -99,6 +99,13 @@ export function Pricing() {
         style={{ background: 'radial-gradient(circle, rgba(214,218,254,0.4) 0%, transparent 70%)' }}
       />
 
+      {/* Star decoration */}
+      <div aria-hidden="true" className="absolute bottom-16 left-6 text-purple/10 pointer-events-none animate-spin-slow" style={{ animationDirection: 'reverse' }}>
+        <svg className="w-20 h-20" viewBox="0 0 100 100" fill="currentColor">
+          <path d="M50 4 Q58 30 83 17 Q70 42 96 50 Q70 58 83 83 Q58 70 50 96 Q42 70 17 83 Q30 58 4 50 Q30 42 17 17 Q42 30 50 4 Z"/>
+        </svg>
+      </div>
+
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
 
         {/* Header */}

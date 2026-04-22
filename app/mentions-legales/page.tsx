@@ -29,7 +29,8 @@ export default function MentionsLegales() {
               <ul className="mt-3 flex flex-col gap-1 pl-4 border-l-2 border-light-border">
                 <li><strong className="text-ink">Nom :</strong> Arthur Vogel</li>
                 <li><strong className="text-ink">Dénomination commerciale :</strong> VGL360</li>
-                <li><strong className="text-ink">Statut :</strong> Micro-entrepreneur</li>
+                <li><strong className="text-ink">Statut :</strong> SASU (Société par Actions Simplifiée Unipersonnelle)</li>
+                <li><strong className="text-ink">Capital social :</strong> 2 000 €</li>
                 <li><strong className="text-ink">SIRET :</strong> 925 269 052 00013</li>
                 <li><strong className="text-ink">Email :</strong> contact@vgl360.fr</li>
                 <li><strong className="text-ink">Activité :</strong> Création de sites web et Visite Virtuelle Google 360°</li>

@@ -27,7 +27,7 @@ export default function CGV() {
               <h2 className="font-black text-ink text-base uppercase tracking-wide mb-3">Article 1 — Objet</h2>
               <p>
                 Les présentes Conditions Générales de Vente (CGV) régissent les relations contractuelles entre
-                <strong className="text-ink"> Arthur Vogel — VGL360</strong> (ci-après «&nbsp;le Prestataire&nbsp;»)
+                <strong className="text-ink"> VGL360, SASU au capital de 2 000 €</strong> (ci-après «&nbsp;le Prestataire&nbsp;»)
                 et toute personne physique ou morale (ci-après «&nbsp;le Client&nbsp;») souhaitant recourir à ses
                 services de création de sites web et de visite virtuelle Google 360°.
               </p>
@@ -53,9 +53,8 @@ export default function CGV() {
             <section>
               <h2 className="font-black text-ink text-base uppercase tracking-wide mb-3">Article 3 — Tarifs</h2>
               <p>
-                Les tarifs sont exprimés en euros hors taxes (HT). En tant que micro-entrepreneur bénéficiant
-                de la franchise de TVA (article 293B du CGI), aucune TVA n&apos;est applicable. La mention
-                «&nbsp;TVA non applicable — art. 293B du CGI&nbsp;» figure sur chaque facture.
+                Les tarifs sont exprimés en euros hors taxes (HT). En tant que SASU assujettie à la TVA,
+                celle-ci sera ajoutée au taux légal en vigueur sur chaque facture émise.
               </p>
               <p className="mt-3">
                 Les tarifs indicatifs des packs sont disponibles sur la page Tarifs du site. Un devis sur mesure
