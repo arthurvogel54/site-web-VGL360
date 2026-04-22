@@ -117,7 +117,7 @@ export function Hero() {
                 }}
               >
                 <img
-                  src="/photo.jpg"
+                  src="/photo.png"
                   alt="Fondateur VGL360"
                   className="w-full h-full object-cover object-top"
                 />
