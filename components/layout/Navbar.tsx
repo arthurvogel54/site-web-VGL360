@@ -27,7 +27,7 @@ export function Navbar() {
       className={clsx(
         'fixed top-0 left-0 right-0 z-50 transition-all duration-500',
         scrolled
-          ? 'bg-dark-DEFAULT/90 backdrop-blur-xl border-b border-dark-border'
+          ? 'bg-white/95 backdrop-blur-xl border-b border-light-border shadow-sm'
           : 'bg-transparent'
       )}
     >
@@ -37,11 +37,11 @@ export function Navbar() {
       >
         {/* Logo */}
         <a href="#" aria-label="VGL360 — Accueil" className="flex items-center gap-2 group">
-          <div className="w-8 h-8 rounded-lg bg-purple flex items-center justify-center group-hover:bg-citrine transition-colors duration-300">
-            <span className="text-white group-hover:text-dark-DEFAULT font-black text-xs transition-colors duration-300">V</span>
+          <div className="w-8 h-8 rounded-xl bg-purple flex items-center justify-center group-hover:bg-purple-dark transition-colors duration-300">
+            <span className="text-white font-black text-xs">V</span>
           </div>
-          <span className="font-black text-white text-lg tracking-tight">
-            VGL<span className="text-citrine">360</span>
+          <span className="font-black text-ink text-lg tracking-tight">
+            VGL<span className="text-purple">360</span>
           </span>
         </a>
 
@@ -51,10 +51,10 @@ export function Navbar() {
             <li key={link.href}>
               <a
                 href={link.href}
-                className="text-sm text-white/60 hover:text-white font-medium tracking-wide transition-colors duration-200 relative group"
+                className="text-sm text-ink-soft hover:text-purple font-medium tracking-wide transition-colors duration-200 relative group"
               >
                 {link.label}
-                <span className="absolute -bottom-1 left-0 w-0 h-px bg-citrine group-hover:w-full transition-all duration-300" />
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-purple group-hover:w-full transition-all duration-300 rounded-full" />
               </a>
             </li>
           ))}
@@ -67,23 +67,23 @@ export function Navbar() {
           </Button>
         </div>
 
-        {/* Mobile menu toggle */}
+        {/* Mobile toggle */}
         <button
           aria-label={menuOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
           aria-expanded={menuOpen}
           onClick={() => setMenuOpen(!menuOpen)}
-          className="md:hidden flex flex-col gap-1.5 p-2 group"
+          className="md:hidden flex flex-col gap-1.5 p-2"
         >
-          <span className={clsx('w-6 h-0.5 bg-white transition-all duration-300', menuOpen && 'rotate-45 translate-y-2')} />
-          <span className={clsx('w-6 h-0.5 bg-white transition-all duration-300', menuOpen && 'opacity-0')} />
-          <span className={clsx('w-6 h-0.5 bg-white transition-all duration-300', menuOpen && '-rotate-45 -translate-y-2')} />
+          <span className={clsx('w-6 h-0.5 bg-ink transition-all duration-300', menuOpen && 'rotate-45 translate-y-2')} />
+          <span className={clsx('w-6 h-0.5 bg-ink transition-all duration-300', menuOpen && 'opacity-0')} />
+          <span className={clsx('w-6 h-0.5 bg-ink transition-all duration-300', menuOpen && '-rotate-45 -translate-y-2')} />
         </button>
       </nav>
 
       {/* Mobile menu */}
       <div
         className={clsx(
-          'md:hidden bg-dark-DEFAULT/95 backdrop-blur-xl border-b border-dark-border transition-all duration-300 overflow-hidden',
+          'md:hidden bg-white border-b border-light-border transition-all duration-300 overflow-hidden',
           menuOpen ? 'max-h-80 opacity-100' : 'max-h-0 opacity-0'
         )}
       >
@@ -93,7 +93,7 @@ export function Navbar() {
               <a
                 href={link.href}
                 onClick={() => setMenuOpen(false)}
-                className="text-white/80 hover:text-white font-medium text-lg block transition-colors duration-200"
+                className="text-ink-soft hover:text-purple font-medium text-lg block transition-colors duration-200"
               >
                 {link.label}
               </a>

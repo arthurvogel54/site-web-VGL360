@@ -9,10 +9,9 @@
   --font-body: 'Inter', sans-serif;
   --color-purple: #6341B8;
   --color-mauve: #D6DAFD;
-  --color-citrine: #DFFF00;
-  --color-fuchsia: #FF3E8A;
-  --color-lime: #C8F135;
-  --color-dark: #0A0A0F;
+  --color-ink: #1A0F3C;
+  --color-light: #FFFFFF;
+  --color-light-soft: #F5F1FF;
 }
 
 * {
@@ -26,8 +25,8 @@ html {
 }
 
 body {
-  background: var(--color-dark);
-  color: #ffffff;
+  background: #ffffff;
+  color: var(--color-ink);
   font-family: var(--font-body);
   overflow-x: hidden;
 }
@@ -37,7 +36,7 @@ body {
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #0A0A0F;
+  background: #F5F1FF;
 }
 ::-webkit-scrollbar-thumb {
   background: #6341B8;
@@ -50,7 +49,15 @@ body {
 /* Selection */
 ::selection {
   background: #6341B8;
-  color: #F4D03F;
+  color: #ffffff;
+}
+
+/* Card shadow utility */
+.card-shadow {
+  box-shadow: 0 4px 24px rgba(99, 65, 184, 0.08);
+}
+.card-shadow-hover:hover {
+  box-shadow: 0 8px 40px rgba(99, 65, 184, 0.16);
 }
 
 /* Utility classes */
@@ -107,8 +114,8 @@ body {
 /* Grid background */
 .bg-grid {
   background-image:
-    linear-gradient(rgba(99, 65, 184, 0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(99, 65, 184, 0.08) 1px, transparent 1px);
+    linear-gradient(rgba(99, 65, 184, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(99, 65, 184, 0.05) 1px, transparent 1px);
   background-size: 40px 40px;
 }
 

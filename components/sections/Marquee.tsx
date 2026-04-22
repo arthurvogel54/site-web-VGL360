@@ -25,7 +25,7 @@ export function Marquee() {
   return (
     <div
       aria-hidden="true"
-      className="relative overflow-hidden py-5 bg-purple border-y border-purple-light/20"
+      className="relative overflow-hidden py-5 bg-purple"
     >
       <div className="marquee-track">
         {doubled.map((item, i) => (

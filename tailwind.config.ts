@@ -18,15 +18,20 @@ const config: Config = {
           DEFAULT: '#D6DAFD',
           dark: '#B8BFFA',
         },
-        citrine: {
-          DEFAULT: '#DFFF00',
-          dark: '#BFDF00',
+        rose: {
+          soft: '#FFE4F0',
+          DEFAULT: '#F472B6',
         },
-        fuchsia: {
-          vgl: '#FF3E8A',
+        ink: {
+          DEFAULT: '#1A0F3C',
+          soft: '#5A4A8A',
+          muted: '#9B8EC4',
         },
-        lime: {
-          vgl: '#C8F135',
+        light: {
+          DEFAULT: '#FFFFFF',
+          soft: '#F5F1FF',
+          card: '#EDE8FF',
+          border: '#DDD6F3',
         },
         dark: {
           DEFAULT: '#0A0A0F',
