@@ -30,33 +30,39 @@ export function Hero() {
             <div className="mb-8">
               <Badge variant="purple">
                 <span className="w-1.5 h-1.5 rounded-full bg-purple inline-block" />
-                Création Web — Toulouse & Remote
+                Création Web — Partout en France
               </Badge>
             </div>
 
             <h1 className="font-black uppercase tracking-tight leading-none mb-8">
               <span
                 className="block text-ink"
-                style={{ fontSize: 'clamp(2.8rem, 8vw, 7rem)', lineHeight: '0.92' }}
+                style={{ fontSize: 'clamp(2.2rem, 6.5vw, 5.5rem)', lineHeight: '0.95' }}
               >
-                L'ARCHITECTURE
+                LE SITE WEB
               </span>
               <span
                 className="block"
                 style={{
-                  fontSize: 'clamp(2.8rem, 8vw, 7rem)',
-                  lineHeight: '0.92',
+                  fontSize: 'clamp(2.2rem, 6.5vw, 5.5rem)',
+                  lineHeight: '0.95',
                   WebkitTextStroke: '2px #6341B8',
                   color: 'transparent',
                 }}
               >
-                DE VOTRE
+                QUI DONNE ENVIE
+              </span>
+              <span
+                className="block text-ink"
+                style={{ fontSize: 'clamp(2.2rem, 6.5vw, 5.5rem)', lineHeight: '0.95' }}
+              >
+                DE POUSSER
               </span>
               <span
                 className="block text-purple"
-                style={{ fontSize: 'clamp(2.8rem, 8vw, 7rem)', lineHeight: '0.92' }}
+                style={{ fontSize: 'clamp(2.2rem, 6.5vw, 5.5rem)', lineHeight: '0.95' }}
               >
-                PRÉSENCE EN LIGNE.
+                VOTRE PORTE.
               </span>
             </h1>
 
