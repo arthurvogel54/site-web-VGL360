@@ -110,7 +110,7 @@ export function Approach() {
                   </div>
                 ) : (
                   <img
-                    src="/photosarthur.png"
+                    src="/photoarthur.png"
                     alt="Fondateur VGL360"
                     className="w-full h-full object-cover object-top"
                     onError={() => setPhotoError(true)}

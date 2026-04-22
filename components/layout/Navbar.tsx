@@ -38,7 +38,7 @@ export function Navbar() {
         {/* Logo */}
         <a href="#" aria-label="VGL360 — Accueil" className="flex items-center group">
           <img
-            src="/logo.png"
+            src="/360logo.png"
             alt="VGL360"
             className="h-12 w-auto object-contain"
           />
