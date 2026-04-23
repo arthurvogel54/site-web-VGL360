@@ -101,7 +101,7 @@ export function Pricing() {
 
       {/* Star decoration */}
       <div aria-hidden="true" className="absolute bottom-16 left-6 pointer-events-none animate-spin-slow" style={{ animationDirection: 'reverse', opacity: 0.12 }}>
-        <img src="/etoile-removebg-preview.png" alt="" className="w-20 h-20" />
+        <img src="/etoile-removebg-preview.png" alt="" style={{ width: 240, height: 240 }} />
       </div>
 
       <div className="max-w-7xl mx-auto px-6 lg:px-8">

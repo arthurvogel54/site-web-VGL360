@@ -94,7 +94,7 @@ export function Services() {
     >
       {/* Star decoration */}
       <div aria-hidden="true" className="absolute top-10 right-8 pointer-events-none" style={{ transform: 'rotate(20deg)', opacity: 0.12 }}>
-        <img src="/etoile-removebg-preview.png" alt="" className="w-28 h-28" />
+        <img src="/etoile-removebg-preview.png" alt="" style={{ width: 300, height: 300 }} />
       </div>
 
       <div className="max-w-7xl mx-auto px-6 lg:px-8">

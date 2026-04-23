@@ -72,8 +72,8 @@ export function Approach() {
           {/* Left: Photo */}
           <div className="relative flex justify-center order-2 lg:order-1">
             {/* Spinning star */}
-            <div aria-hidden="true" className="absolute -top-6 -left-2 animate-spin-slow" style={{ animationDuration: '16s', opacity: 0.4 }}>
-              <img src="/etoile-removebg-preview.png" alt="" className="w-10 h-10" />
+            <div aria-hidden="true" className="absolute -top-6 -left-2 animate-spin-slow" style={{ animationDuration: '16s', opacity: 0.35 }}>
+              <img src="/etoile-removebg-preview.png" alt="" style={{ width: 120, height: 120 }} />
             </div>
 
             <div className="relative" style={{ width: 'min(360px, 80vw)' }}>

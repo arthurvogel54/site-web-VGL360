@@ -33,7 +33,7 @@ export function Contact() {
 
       {/* Star decoration */}
       <div aria-hidden="true" className="absolute bottom-10 right-10 pointer-events-none" style={{ transform: 'rotate(-15deg)', opacity: 0.15 }}>
-        <img src="/etoile-removebg-preview.png" alt="" className="w-16 h-16" />
+        <img src="/etoile-removebg-preview.png" alt="" style={{ width: 192, height: 192 }} />
       </div>
 
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
