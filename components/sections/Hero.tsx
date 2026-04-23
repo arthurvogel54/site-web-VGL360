@@ -299,13 +299,13 @@ export function Hero() {
             </div>
 
             <h1 className="font-display font-black uppercase leading-none mb-8" style={{ letterSpacing: '-0.01em' }}>
-              <span className="block text-ink whitespace-nowrap" style={{ fontSize: 'clamp(1.8rem, 5.8vw, 4.5rem)', lineHeight: '1' }}>
+              <span className="block text-ink whitespace-nowrap" style={{ fontSize: 'clamp(1.8rem, 4.5vw, 4rem)', lineHeight: '1.05' }}>
                 LE SITE WEB
               </span>
-              <span className="block text-ink whitespace-nowrap" style={{ fontSize: 'clamp(1.8rem, 5.8vw, 4.5rem)', lineHeight: '1' }}>
+              <span className="block text-ink whitespace-nowrap" style={{ fontSize: 'clamp(1.8rem, 4.5vw, 4rem)', lineHeight: '1.05' }}>
                 QUI DONNE ENVIE
               </span>
-              <span className="block text-ink whitespace-nowrap" style={{ fontSize: 'clamp(1.8rem, 5.8vw, 4.5rem)', lineHeight: '1' }}>
+              <span className="block text-ink whitespace-nowrap" style={{ fontSize: 'clamp(1.8rem, 4.5vw, 4rem)', lineHeight: '1.05' }}>
                 DE POUSSER VOTRE PORTE.
               </span>
             </h1>
