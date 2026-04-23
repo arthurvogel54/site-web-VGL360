@@ -93,10 +93,8 @@ export function Services() {
       className="relative py-28 lg:py-36 bg-light-soft overflow-hidden"
     >
       {/* Star decoration */}
-      <div aria-hidden="true" className="absolute top-10 right-8 text-purple/10 pointer-events-none" style={{ transform: 'rotate(20deg)' }}>
-        <svg className="w-28 h-28" viewBox="0 0 100 100" fill="currentColor">
-          <path d="M50 4 Q58 30 83 17 Q70 42 96 50 Q70 58 83 83 Q58 70 50 96 Q42 70 17 83 Q30 58 4 50 Q30 42 17 17 Q42 30 50 4 Z"/>
-        </svg>
+      <div aria-hidden="true" className="absolute top-10 right-8 pointer-events-none" style={{ transform: 'rotate(20deg)', opacity: 0.12 }}>
+        <img src="/etoile-removebg-preview.png" alt="" className="w-28 h-28" />
       </div>
 
       <div className="max-w-7xl mx-auto px-6 lg:px-8">

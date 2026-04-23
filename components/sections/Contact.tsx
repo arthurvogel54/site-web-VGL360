@@ -32,10 +32,8 @@ export function Contact() {
       />
 
       {/* Star decoration */}
-      <div aria-hidden="true" className="absolute bottom-10 right-10 text-purple/15 pointer-events-none" style={{ transform: 'rotate(-15deg)' }}>
-        <svg className="w-16 h-16" viewBox="0 0 100 100" fill="currentColor">
-          <path d="M50 4 Q58 30 83 17 Q70 42 96 50 Q70 58 83 83 Q58 70 50 96 Q42 70 17 83 Q30 58 4 50 Q30 42 17 17 Q42 30 50 4 Z"/>
-        </svg>
+      <div aria-hidden="true" className="absolute bottom-10 right-10 pointer-events-none" style={{ transform: 'rotate(-15deg)', opacity: 0.15 }}>
+        <img src="/etoile-removebg-preview.png" alt="" className="w-16 h-16" />
       </div>
 
       <div className="max-w-7xl mx-auto px-6 lg:px-8">

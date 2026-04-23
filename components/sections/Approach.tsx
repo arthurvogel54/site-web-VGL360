@@ -72,10 +72,8 @@ export function Approach() {
           {/* Left: Photo */}
           <div className="relative flex justify-center order-2 lg:order-1">
             {/* Spinning star */}
-            <div aria-hidden="true" className="absolute -top-6 -left-2 animate-spin-slow" style={{ animationDuration: '16s' }}>
-              <svg className="w-10 h-10 text-purple/40" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 0L13.5 10.5L24 12L13.5 13.5L12 24L10.5 13.5L0 12L10.5 10.5Z"/>
-              </svg>
+            <div aria-hidden="true" className="absolute -top-6 -left-2 animate-spin-slow" style={{ animationDuration: '16s', opacity: 0.4 }}>
+              <img src="/etoile-removebg-preview.png" alt="" className="w-10 h-10" />
             </div>
 
             <div className="relative" style={{ width: 'min(360px, 80vw)' }}>
