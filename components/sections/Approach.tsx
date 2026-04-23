@@ -120,8 +120,9 @@ export function Approach() {
                   style={{ background: 'linear-gradient(to top, rgba(99,65,184,0.6), transparent)' }}
                 />
                 <div className="absolute bottom-4 left-4">
-                  <div className="text-xs font-bold text-white/70 uppercase tracking-widest">VGL360</div>
-                  <div className="text-sm font-black text-white">Fondateur & Développeur</div>
+                  <div className="text-xs font-bold text-white/60 uppercase tracking-widest mb-0.5">VGL360</div>
+                  <div className="text-base font-black text-white leading-tight">Arthur VOGEL</div>
+                  <div className="text-xs font-semibold text-white/80">Fondateur & Développeur</div>
                 </div>
               </div>
 
