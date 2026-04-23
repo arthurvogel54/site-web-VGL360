@@ -144,17 +144,12 @@ export function Approach() {
 
             <h2
               id="apropos-heading"
-              className="font-black uppercase leading-none mb-8 text-ink"
+              className="font-display font-black uppercase leading-none mb-8 text-ink"
               style={{ fontSize: 'clamp(2.5rem, 6vw, 5rem)' }}
             >
               <span className="block">TECH.</span>
-              <span
-                className="block"
-                style={{ WebkitTextStroke: '2px #6341B8', color: 'transparent' }}
-              >
-                DESIGN.
-              </span>
-              <span className="block text-purple">IMMERSION.</span>
+              <span className="block">DESIGN.</span>
+              <span className="block">IMMERSION.</span>
             </h2>
 
             <blockquote className="border-l-2 border-purple pl-5 mb-8">

@@ -44,7 +44,7 @@ export function Contact() {
             <Badge variant="purple" className="mb-6">Travaillons ensemble</Badge>
             <h2
               id="contact-heading"
-              className="font-black uppercase leading-none mb-8 text-ink"
+              className="font-display font-black uppercase leading-none mb-8 text-ink"
               style={{ fontSize: 'clamp(2.5rem, 6vw, 5rem)' }}
             >
               <span className="block">LANCEZ</span>

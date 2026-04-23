@@ -307,17 +307,14 @@ export function Hero() {
               </Badge>
             </div>
 
-            <h1 className="font-black uppercase tracking-tight leading-none mb-8">
+            <h1 className="font-display font-black uppercase leading-none mb-8" style={{ letterSpacing: '-0.01em' }}>
               <span className="block text-ink whitespace-nowrap" style={{ fontSize: 'clamp(1.8rem, 5.8vw, 4.5rem)', lineHeight: '1' }}>
                 LE SITE WEB
               </span>
-              <span
-                className="block whitespace-nowrap"
-                style={{ fontSize: 'clamp(1.5rem, 4.2vw, 3.3rem)', lineHeight: '1.05', WebkitTextStroke: '2px #6341B8', color: 'transparent' }}
-              >
+              <span className="block text-ink whitespace-nowrap" style={{ fontSize: 'clamp(1.5rem, 4.2vw, 3.3rem)', lineHeight: '1' }}>
                 QUI DONNE ENVIE
               </span>
-              <span className="block text-purple whitespace-nowrap" style={{ fontSize: 'clamp(1rem, 2.8vw, 2.2rem)', lineHeight: '1.1' }}>
+              <span className="block text-ink whitespace-nowrap" style={{ fontSize: 'clamp(1rem, 2.8vw, 2.2rem)', lineHeight: '1.05' }}>
                 DE POUSSER VOTRE PORTE.
               </span>
             </h1>

@@ -63,7 +63,7 @@ export function Process() {
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 mb-16">
           <h2
             id="pourquoi-heading"
-            className="font-black uppercase leading-none text-ink"
+            className="font-display font-black uppercase leading-none text-ink"
             style={{ fontSize: 'clamp(2.5rem, 6vw, 5.5rem)' }}
           >
             <span className="block">POURQUOI</span>

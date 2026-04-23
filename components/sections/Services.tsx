@@ -105,7 +105,7 @@ export function Services() {
           <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8">
             <h2
               id="services-heading"
-              className="font-black uppercase leading-none text-ink"
+              className="font-display font-black uppercase leading-none text-ink"
               style={{ fontSize: 'clamp(2.5rem, 7vw, 6rem)' }}
             >
               <span className="block">CRÉATION</span>

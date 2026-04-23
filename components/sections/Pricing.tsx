@@ -111,7 +111,7 @@ export function Pricing() {
           <Badge variant="purple" className="mb-6">Tarifs transparents</Badge>
           <h2
             id="pricing-heading"
-            className="font-black uppercase leading-none mb-6 text-ink"
+            className="font-display font-black uppercase leading-none mb-6 text-ink"
             style={{ fontSize: 'clamp(2.5rem, 7vw, 6rem)' }}
           >
             <span className="block">NOS</span>
