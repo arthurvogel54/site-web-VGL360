@@ -36,7 +36,7 @@ export function Navbar() {
         className="max-w-7xl mx-auto px-6 lg:px-8 h-16 flex items-center justify-between"
       >
         {/* Logo */}
-        <a href="#" aria-label="VGL360 — Accueil" className="flex items-center group">
+        <a href="/" aria-label="VGL360 — Accueil" className="flex items-center group">
           <img
             src="/360logo-removebg-preview.png"
             alt="VGL360"
