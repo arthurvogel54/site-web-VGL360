@@ -302,10 +302,10 @@ export function Hero() {
               <span className="block text-ink whitespace-nowrap" style={{ fontSize: 'clamp(1.8rem, 5.8vw, 4.5rem)', lineHeight: '1' }}>
                 LE SITE WEB
               </span>
-              <span className="block text-ink whitespace-nowrap" style={{ fontSize: 'clamp(1.5rem, 4.2vw, 3.3rem)', lineHeight: '1' }}>
+              <span className="block text-ink whitespace-nowrap" style={{ fontSize: 'clamp(1.8rem, 5.8vw, 4.5rem)', lineHeight: '1' }}>
                 QUI DONNE ENVIE
               </span>
-              <span className="block text-ink whitespace-nowrap" style={{ fontSize: 'clamp(1rem, 2.8vw, 2.2rem)', lineHeight: '1.05' }}>
+              <span className="block text-ink whitespace-nowrap" style={{ fontSize: 'clamp(1.8rem, 5.8vw, 4.5rem)', lineHeight: '1' }}>
                 DE POUSSER VOTRE PORTE.
               </span>
             </h1>

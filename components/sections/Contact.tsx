@@ -15,7 +15,11 @@ export function Contact() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setStatus('sending')
-    await new Promise((r) => setTimeout(r, 1200))
+    await fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(form),
+    })
     setStatus('sent')
   }
 
@@ -64,7 +68,7 @@ export function Contact() {
             {/* Contact info */}
             <div className="flex flex-col gap-4">
               <a
-                href="mailto:easy.vgl360@gmail.com"
+                href="mailto:contact@vgl360.fr"
                 className="flex items-center gap-4 group"
                 aria-label="Envoyer un email"
               >
@@ -74,7 +78,7 @@ export function Contact() {
                   </svg>
                 </div>
                 <span className="font-medium text-sm text-ink-soft group-hover:text-purple transition-colors duration-200">
-                  easy.vgl360@gmail.com
+                  contact@vgl360.fr
                 </span>
               </a>
               <a
