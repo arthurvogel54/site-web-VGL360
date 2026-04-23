@@ -99,8 +99,13 @@ export function Pricing() {
         style={{ background: 'radial-gradient(circle, rgba(214,218,254,0.4) 0%, transparent 70%)' }}
       />
 
-      {/* Star decoration */}
+      {/* Star decoration bas-gauche */}
       <div aria-hidden="true" className="absolute bottom-16 left-6 pointer-events-none animate-spin-slow" style={{ animationDirection: 'reverse', opacity: 0.12 }}>
+        <img src="/etoile-removebg-preview.png" alt="" style={{ width: 240, height: 240 }} />
+      </div>
+
+      {/* Star decoration haut-droite */}
+      <div aria-hidden="true" className="absolute top-10 right-8 pointer-events-none animate-spin-slow" style={{ opacity: 0.1 }}>
         <img src="/etoile-removebg-preview.png" alt="" style={{ width: 240, height: 240 }} />
       </div>
 

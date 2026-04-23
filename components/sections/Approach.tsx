@@ -66,16 +66,16 @@ export function Approach() {
         style={{ background: 'radial-gradient(circle, rgba(99,65,184,0.08) 0%, transparent 70%)' }}
       />
 
+      {/* Grande étoile dans l'espace vide au-dessus */}
+      <div aria-hidden="true" className="absolute top-4 left-8 lg:left-16 pointer-events-none animate-spin-slow" style={{ opacity: 0.1 }}>
+        <img src="/etoile-removebg-preview.png" alt="" style={{ width: 360, height: 360 }} />
+      </div>
+
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
 
           {/* Left: Photo */}
           <div className="relative flex justify-center order-2 lg:order-1">
-            {/* Spinning star */}
-            <div aria-hidden="true" className="absolute -top-6 -left-2 animate-spin-slow" style={{ animationDuration: '16s', opacity: 0.35 }}>
-              <img src="/etoile-removebg-preview.png" alt="" style={{ width: 120, height: 120 }} />
-            </div>
-
             <div className="relative" style={{ width: 'min(360px, 80vw)' }}>
               {/* Soft glow behind */}
               <div

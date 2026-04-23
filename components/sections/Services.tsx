@@ -93,7 +93,7 @@ export function Services() {
       className="relative py-28 lg:py-36 bg-light-soft overflow-hidden"
     >
       {/* Star decoration */}
-      <div aria-hidden="true" className="absolute top-10 right-8 pointer-events-none" style={{ transform: 'rotate(20deg)', opacity: 0.12 }}>
+      <div aria-hidden="true" className="absolute top-10 right-8 pointer-events-none animate-spin-slow" style={{ opacity: 0.12 }}>
         <img src="/etoile-removebg-preview.png" alt="" style={{ width: 300, height: 300 }} />
       </div>
 

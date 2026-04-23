@@ -32,7 +32,7 @@ export function Contact() {
       />
 
       {/* Star decoration */}
-      <div aria-hidden="true" className="absolute bottom-10 right-10 pointer-events-none" style={{ transform: 'rotate(-15deg)', opacity: 0.15 }}>
+      <div aria-hidden="true" className="absolute bottom-10 right-10 pointer-events-none animate-spin-slow" style={{ opacity: 0.15 }}>
         <img src="/etoile-removebg-preview.png" alt="" style={{ width: 192, height: 192 }} />
       </div>
 
