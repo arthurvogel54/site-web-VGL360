@@ -152,6 +152,18 @@ body {
   to { transform: translateX(-50%); }
 }
 
+/* MacBook lid opening animation */
+@keyframes laptop-open {
+  0%, 15% { transform: rotateX(-78deg); }
+  100%     { transform: rotateX(-18deg); }
+}
+
+/* Infinite scrolling website content */
+@keyframes scroll-site {
+  0%   { transform: translateY(0); }
+  100% { transform: translateY(-50%); }
+}
+
 /* Focus styles */
 *:focus-visible {
   outline: 2px solid #6341B8;
