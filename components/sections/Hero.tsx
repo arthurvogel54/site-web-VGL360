@@ -286,11 +286,6 @@ export function Hero() {
         style={{ background: 'radial-gradient(circle, rgba(99,65,184,0.05) 0%, transparent 70%)' }}
       />
 
-      {/* Star — entre le titre et l'illustration, desktop seulement */}
-      <div aria-hidden="true" className="hidden lg:block absolute pointer-events-none animate-spin-slow" style={{ top: '38%', left: 'calc(50% - 90px)', opacity: 0.13 }}>
-        <img src="/etoile-removebg-preview.png" alt="" style={{ width: 168, height: 168 }} />
-      </div>
-
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 py-20 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
