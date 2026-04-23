@@ -29,13 +29,13 @@ export function Footer() {
 
         {/* Brand */}
         <div className="lg:col-span-1">
-          <a href="#" aria-label="VGL360 — Accueil" className="flex items-center gap-2 mb-6 group w-fit">
-            <div className="w-8 h-8 rounded-xl bg-purple flex items-center justify-center group-hover:bg-mauve transition-colors duration-300">
-              <span className="text-white group-hover:text-ink font-black text-xs transition-colors duration-300">V</span>
-            </div>
-            <span className="font-black text-white text-lg tracking-tight">
-              VGL<span className="text-mauve">360</span>
-            </span>
+          <a href="#" aria-label="VGL360 — Accueil" className="flex items-center mb-6 w-fit">
+            <img
+              src="/VGL-removebg-preview.png"
+              alt="VGL360"
+              className="h-14 w-auto object-contain"
+              style={{ filter: 'brightness(0) invert(1)' }}
+            />
           </a>
           <p className="text-white/40 text-sm leading-relaxed mb-6">
             Création web & Visite Virtuelle Google 360°. Votre présence en ligne, architecturée avec soin.
