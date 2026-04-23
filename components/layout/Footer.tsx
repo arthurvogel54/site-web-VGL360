@@ -31,7 +31,7 @@ export function Footer() {
         <div className="lg:col-span-1">
           <a href="#" aria-label="VGL360 — Accueil" className="flex items-center mb-6 w-fit">
             <img
-              src="/VGL-removebg-preview.png"
+              src="/360logo-removebg-preview.png"
               alt="VGL360"
               className="h-14 w-auto object-contain"
               style={{ filter: 'brightness(0) invert(1)' }}
