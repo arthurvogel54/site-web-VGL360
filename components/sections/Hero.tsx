@@ -6,61 +6,56 @@ import { Badge } from '@/components/ui/Badge'
 function WebsiteContent() {
   return (
     <div style={{ background: '#fff' }}>
-      {/* Hero section */}
-      <div className="px-4 py-4" style={{ background: 'linear-gradient(135deg, #F5F1FF 0%, #fff 100%)' }}>
-        <div className="w-12 h-1.5 rounded-full mb-2" style={{ background: '#6341B8' }} />
-        <div className="w-32 h-3 rounded-full mb-1.5" style={{ background: 'rgba(26,15,60,0.25)' }} />
-        <div className="w-24 h-3 rounded-full mb-1.5" style={{ background: 'rgba(99,65,184,0.4)' }} />
-        <div className="w-28 h-2 rounded-full mb-3" style={{ background: 'rgba(26,15,60,0.12)' }} />
-        <div className="flex gap-2">
-          <div className="w-16 h-6 rounded-full" style={{ background: '#6341B8' }} />
-          <div className="w-14 h-6 rounded-full" style={{ border: '1.5px solid rgba(99,65,184,0.35)' }} />
+      <div style={{ background: 'linear-gradient(135deg, #F5F1FF 0%, #fff 100%)', padding: '14px 14px 10px' }}>
+        <div style={{ width: 40, height: 5, borderRadius: 4, background: '#6341B8', marginBottom: 8 }} />
+        <div style={{ width: 120, height: 10, borderRadius: 5, background: 'rgba(26,15,60,0.22)', marginBottom: 6 }} />
+        <div style={{ width: 90, height: 10, borderRadius: 5, background: 'rgba(99,65,184,0.38)', marginBottom: 6 }} />
+        <div style={{ width: 105, height: 7, borderRadius: 4, background: 'rgba(26,15,60,0.1)', marginBottom: 12 }} />
+        <div style={{ display: 'flex', gap: 8 }}>
+          <div style={{ width: 60, height: 22, borderRadius: 20, background: '#6341B8' }} />
+          <div style={{ width: 52, height: 22, borderRadius: 20, border: '1.5px solid rgba(99,65,184,0.3)' }} />
         </div>
       </div>
 
-      {/* Stats row */}
-      <div className="flex gap-2 px-3 py-3">
+      <div style={{ display: 'flex', gap: 8, padding: '10px 12px' }}>
         {[
           { bg: 'rgba(99,65,184,0.08)', dot: '#6341B8' },
           { bg: '#EDE8FF', dot: '#9B8EC4' },
-          { bg: '#F5F1FF', dot: '#DDD6F3' },
+          { bg: '#F5F1FF', dot: '#C4BCE8' },
         ].map((c, i) => (
-          <div key={i} className="flex-1 rounded-lg p-2.5" style={{ background: c.bg }}>
-            <div className="w-4 h-4 rounded mb-1.5" style={{ background: c.dot }} />
-            <div className="w-full h-1.5 rounded-full mb-1" style={{ background: 'rgba(0,0,0,0.1)' }} />
-            <div className="w-3/4 h-1.5 rounded-full" style={{ background: 'rgba(0,0,0,0.07)' }} />
+          <div key={i} style={{ flex: 1, borderRadius: 10, padding: 10, background: c.bg }}>
+            <div style={{ width: 16, height: 16, borderRadius: 5, background: c.dot, marginBottom: 7 }} />
+            <div style={{ height: 5, borderRadius: 3, background: 'rgba(0,0,0,0.1)', marginBottom: 4 }} />
+            <div style={{ width: '70%', height: 5, borderRadius: 3, background: 'rgba(0,0,0,0.07)' }} />
           </div>
         ))}
       </div>
 
-      {/* Stars / testimonial */}
-      <div className="mx-3 mb-3 rounded-xl p-3" style={{ background: '#F5F1FF' }}>
-        <div className="flex gap-1 mb-2">
+      <div style={{ margin: '0 12px 10px', borderRadius: 10, padding: '10px 12px', background: '#F5F1FF' }}>
+        <div style={{ display: 'flex', gap: 4, marginBottom: 7 }}>
           {[1, 2, 3, 4, 5].map((s) => (
-            <div key={s} className="w-2 h-2 rounded-sm" style={{ background: '#6341B8' }} />
+            <div key={s} style={{ width: 8, height: 8, borderRadius: 2, background: '#6341B8' }} />
           ))}
         </div>
-        <div className="w-full h-1.5 rounded-full mb-1" style={{ background: 'rgba(26,15,60,0.15)' }} />
-        <div className="w-4/5 h-1.5 rounded-full" style={{ background: 'rgba(26,15,60,0.09)' }} />
+        <div style={{ height: 5, borderRadius: 3, background: 'rgba(26,15,60,0.14)', marginBottom: 4 }} />
+        <div style={{ width: '80%', height: 5, borderRadius: 3, background: 'rgba(26,15,60,0.08)' }} />
       </div>
 
-      {/* Services mini-grid */}
-      <div className="grid grid-cols-2 gap-2 px-3 pb-3">
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 8, padding: '0 12px 10px' }}>
         {[0, 1, 2, 3].map((i) => (
-          <div key={i} className="rounded-xl p-2.5" style={{ border: '1px solid #DDD6F3' }}>
-            <div className="w-5 h-5 rounded-md mb-2" style={{ background: i % 2 === 0 ? 'rgba(99,65,184,0.15)' : '#EDE8FF' }} />
-            <div className="w-full h-1.5 rounded-full mb-1" style={{ background: 'rgba(26,15,60,0.18)' }} />
-            <div className="w-3/4 h-1.5 rounded-full" style={{ background: 'rgba(26,15,60,0.1)' }} />
+          <div key={i} style={{ borderRadius: 10, padding: 10, border: '1px solid #DDD6F3' }}>
+            <div style={{ width: 18, height: 18, borderRadius: 5, background: i % 2 === 0 ? 'rgba(99,65,184,0.15)' : '#EDE8FF', marginBottom: 7 }} />
+            <div style={{ height: 5, borderRadius: 3, background: 'rgba(26,15,60,0.16)', marginBottom: 4 }} />
+            <div style={{ width: '70%', height: 5, borderRadius: 3, background: 'rgba(26,15,60,0.09)' }} />
           </div>
         ))}
       </div>
 
-      {/* Contact CTA band */}
-      <div className="px-3 pb-4">
-        <div className="rounded-xl p-3" style={{ background: 'linear-gradient(135deg, #6341B8, #9B55D4)' }}>
-          <div className="w-24 h-2.5 rounded-full mb-2" style={{ background: 'rgba(255,255,255,0.4)' }} />
-          <div className="w-16 h-2 rounded-full mb-3" style={{ background: 'rgba(255,255,255,0.25)' }} />
-          <div className="w-20 h-6 rounded-full" style={{ background: 'rgba(255,255,255,0.2)', border: '1px solid rgba(255,255,255,0.3)' }} />
+      <div style={{ padding: '0 12px 16px' }}>
+        <div style={{ borderRadius: 12, padding: 12, background: 'linear-gradient(135deg, #6341B8, #9B55D4)' }}>
+          <div style={{ width: 88, height: 8, borderRadius: 4, background: 'rgba(255,255,255,0.38)', marginBottom: 7 }} />
+          <div style={{ width: 60, height: 6, borderRadius: 3, background: 'rgba(255,255,255,0.22)', marginBottom: 12 }} />
+          <div style={{ width: 72, height: 22, borderRadius: 20, background: 'rgba(255,255,255,0.2)', border: '1px solid rgba(255,255,255,0.3)' }} />
         </div>
       </div>
     </div>
@@ -70,155 +65,207 @@ function WebsiteContent() {
 function MacbookIllustration() {
   return (
     <div className="relative flex justify-center lg:justify-end" aria-hidden="true">
-      {/* Soft glow behind */}
+      {/* Glow blob */}
       <div
         className="absolute -inset-8 rounded-[3rem] pointer-events-none"
-        style={{ background: 'radial-gradient(ellipse at 60% 40%, rgba(214,218,254,0.7) 0%, rgba(99,65,184,0.08) 70%)' }}
+        style={{ background: 'radial-gradient(ellipse at 60% 40%, rgba(214,218,254,0.65) 0%, rgba(99,65,184,0.06) 70%)' }}
       />
 
-      {/* Laptop wrapper — slight 3-D tilt */}
+      {/* Desk shadow */}
       <div
-        className="relative"
-        style={{
-          width: 'min(460px, 88vw)',
-          perspective: '1400px',
-        }}
-      >
-        <div style={{ transform: 'rotateX(3deg) rotateY(-5deg)', transformStyle: 'preserve-3d' }}>
+        className="absolute bottom-0 left-1/2 -translate-x-1/2 pointer-events-none"
+        style={{ width: '80%', height: 16, background: 'radial-gradient(ellipse, rgba(0,0,0,0.18) 0%, transparent 70%)', filter: 'blur(6px)' }}
+      />
 
-          {/* ── SCREEN LID ── */}
-          <div
-            style={{
-              transformOrigin: 'bottom center',
-              transformStyle: 'preserve-3d',
-              animation: 'laptop-open 1.8s cubic-bezier(0.22, 1, 0.36, 1) forwards',
-            }}
-          >
-            {/* Aluminium bezel */}
-            <div
-              className="rounded-t-2xl overflow-hidden"
-              style={{
-                background: 'linear-gradient(180deg, #3a3a3a 0%, #222 100%)',
-                padding: '10px 10px 5px',
-                boxShadow: '0 -2px 20px rgba(0,0,0,0.35)',
-              }}
-            >
-              {/* Camera notch */}
-              <div className="flex justify-center mb-2">
-                <div className="w-2 h-2 rounded-full" style={{ background: '#3d3d3d', boxShadow: 'inset 0 1px 2px rgba(0,0,0,0.6)' }} />
-              </div>
+      <div className="relative" style={{ width: 'min(460px, 88vw)' }}>
+        {/* Perspective wrapper */}
+        <div style={{ perspective: '1400px', perspectiveOrigin: '50% 30%' }}>
+          {/* 3-D tilt */}
+          <div style={{ transformStyle: 'preserve-3d', transform: 'rotateX(6deg) rotateY(-4deg)' }}>
 
-              {/* Screen glass */}
-              <div className="rounded-lg overflow-hidden" style={{ height: '260px', background: '#fff' }}>
-                {/* Browser chrome */}
-                <div
-                  className="flex items-center gap-2 px-3 py-2"
-                  style={{ background: '#f0f0f0', borderBottom: '1px solid #ddd' }}
-                >
-                  <div className="flex gap-1.5">
-                    <div className="w-2.5 h-2.5 rounded-full" style={{ background: '#FF5F57' }} />
-                    <div className="w-2.5 h-2.5 rounded-full" style={{ background: '#FFBD2E' }} />
-                    <div className="w-2.5 h-2.5 rounded-full" style={{ background: '#28C840' }} />
-                  </div>
+            {/* Laptop body — lid + base share this container */}
+            <div style={{ position: 'relative', height: 36, transformStyle: 'preserve-3d' }}>
+
+              {/* ── LID ── pivot from bottom = hinge at top of base */}
+              <div
+                style={{
+                  position: 'absolute',
+                  bottom: 36,        /* bottom edge of lid sits on top edge of base */
+                  left: '3%',
+                  width: '94%',
+                  transformOrigin: 'bottom center',
+                  transformStyle: 'preserve-3d',
+                  /* starts closed: back of lid faces viewer */
+                  transform: 'rotateX(84deg)',
+                  animation: 'laptop-open 2.6s cubic-bezier(0.22, 1, 0.36, 1) 0.5s forwards',
+                }}
+              >
+                {/* FRONT FACE — screen side (hidden when closed) */}
+                <div style={{ backfaceVisibility: 'hidden' }}>
                   <div
-                    className="flex-1 flex items-center gap-1.5 rounded-full px-3 py-1"
-                    style={{ background: '#fff', border: '1px solid #ddd' }}
+                    style={{
+                      background: 'linear-gradient(180deg, #2c2c2c 0%, #1a1a1a 100%)',
+                      borderRadius: '13px 13px 0 0',
+                      padding: '10px 10px 5px',
+                      boxShadow: '0 -4px 24px rgba(0,0,0,0.5)',
+                    }}
                   >
-                    <svg className="w-2.5 h-2.5 flex-shrink-0" viewBox="0 0 12 12" fill="none" style={{ color: '#aaa' }}>
-                      <circle cx="6" cy="6" r="4" stroke="currentColor" strokeWidth="1" />
-                      <path d="M6 2c0 0-1.5 2-1.5 4s1.5 4 1.5 4M6 2c0 0 1.5 2 1.5 4S6 10 6 10M2 6h8" stroke="currentColor" strokeWidth="0.75" />
-                    </svg>
-                    <span style={{ fontSize: '9px', color: '#aaa', fontWeight: 500 }}>votre-site.fr</span>
+                    {/* Camera */}
+                    <div style={{ textAlign: 'center', marginBottom: 8 }}>
+                      <div style={{
+                        display: 'inline-block', width: 6, height: 6,
+                        borderRadius: '50%', background: '#3a3a3a',
+                        boxShadow: 'inset 0 1px 3px rgba(0,0,0,0.9), 0 0 0 1px #484848',
+                      }} />
+                    </div>
+
+                    {/* Screen glass */}
+                    <div style={{ borderRadius: 7, overflow: 'hidden', height: 270, background: '#fff', boxShadow: '0 0 0 1px rgba(0,0,0,0.08)' }}>
+                      {/* Browser bar */}
+                      <div style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '7px 12px', background: '#f0f0f0', borderBottom: '1px solid #e2e2e2' }}>
+                        <div style={{ display: 'flex', gap: 5 }}>
+                          <div style={{ width: 10, height: 10, borderRadius: '50%', background: '#FF5F57' }} />
+                          <div style={{ width: 10, height: 10, borderRadius: '50%', background: '#FFBD2E' }} />
+                          <div style={{ width: 10, height: 10, borderRadius: '50%', background: '#28C840' }} />
+                        </div>
+                        <div style={{ flex: 1, background: '#fff', borderRadius: 20, padding: '3px 10px', border: '1px solid #ddd', display: 'flex', alignItems: 'center', gap: 5 }}>
+                          <svg width="9" height="9" viewBox="0 0 12 12" fill="none" style={{ color: '#bbb', flexShrink: 0 }}>
+                            <circle cx="6" cy="6" r="4" stroke="currentColor" strokeWidth="1" />
+                            <path d="M6 2c0 0-1.5 2-1.5 4s1.5 4 1.5 4M6 2c0 0 1.5 2 1.5 4S6 10 6 10M2 6h8" stroke="currentColor" strokeWidth="0.75" />
+                          </svg>
+                          <span style={{ fontSize: 9, color: '#bbb', fontWeight: 500 }}>votre-site.fr</span>
+                        </div>
+                      </div>
+
+                      {/* Scrolling site — starts after lid is fully open */}
+                      <div style={{ height: 236, overflow: 'hidden' }}>
+                        <div style={{ animation: 'scroll-site 14s linear 3.5s infinite' }}>
+                          <WebsiteContent />
+                          <WebsiteContent />
+                        </div>
+                      </div>
+                    </div>
                   </div>
+                  <div style={{ height: 5, background: 'linear-gradient(180deg, #777 0%, #999 100%)' }} />
                 </div>
 
-                {/* Infinite scrolling site */}
-                <div className="overflow-hidden" style={{ height: '225px' }}>
-                  <div style={{ animation: 'scroll-site 14s linear infinite' }}>
-                    <WebsiteContent />
-                    <WebsiteContent />
+                {/* BACK FACE — aluminium (visible when closed) */}
+                <div
+                  style={{
+                    position: 'absolute',
+                    inset: 0,
+                    backfaceVisibility: 'hidden',
+                    transform: 'rotateX(180deg)',
+                  }}
+                >
+                  <div
+                    style={{
+                      height: '100%',
+                      background: 'linear-gradient(140deg, #e6e6e6 0%, #c8c8c8 45%, #d4d4d4 75%, #bebebe 100%)',
+                      borderRadius: '0 0 13px 13px',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                    }}
+                  >
+                    {/* Subtle logo mark */}
+                    <div style={{
+                      width: 30, height: 30, borderRadius: '50%',
+                      background: 'rgba(0,0,0,0.04)',
+                      border: '1px solid rgba(0,0,0,0.07)',
+                    }} />
                   </div>
                 </div>
               </div>
-            </div>
 
-            {/* Hinge lip */}
-            <div style={{ height: '4px', background: 'linear-gradient(180deg, #111 0%, #555 100%)' }} />
-          </div>
-
-          {/* ── KEYBOARD BASE ── */}
-          <div
-            className="rounded-b-2xl relative"
-            style={{
-              background: 'linear-gradient(180deg, #c8c8c8 0%, #adadad 100%)',
-              height: '32px',
-              boxShadow: '0 10px 40px rgba(0,0,0,0.28), inset 0 1px 0 rgba(255,255,255,0.35)',
-            }}
-          >
-            {/* Tiny keyboard dots */}
-            <div className="absolute inset-x-10 top-2.5 flex justify-between" style={{ opacity: 0.25 }}>
-              {Array.from({ length: 18 }).map((_, i) => (
-                <div key={i} style={{ width: 4, height: 4, borderRadius: 1, background: '#555' }} />
-              ))}
+              {/* ── BASE / KEYBOARD ── */}
+              <div
+                style={{
+                  position: 'absolute',
+                  bottom: 0, left: 0, right: 0,
+                  height: 36,
+                  background: 'linear-gradient(180deg, #d2d2d2 0%, #b6b6b6 100%)',
+                  borderRadius: '0 0 16px 16px',
+                  boxShadow: '0 18px 60px rgba(0,0,0,0.32), inset 0 1px 0 rgba(255,255,255,0.55)',
+                }}
+              >
+                {/* Keyboard dot row */}
+                <div style={{ position: 'absolute', top: 9, left: 44, right: 44, display: 'flex', justifyContent: 'space-between', opacity: 0.22 }}>
+                  {Array.from({ length: 18 }).map((_, i) => (
+                    <div key={i} style={{ width: 4, height: 4, borderRadius: 1, background: '#555' }} />
+                  ))}
+                </div>
+                {/* Trackpad */}
+                <div style={{
+                  position: 'absolute', bottom: 5, left: '50%', transform: 'translateX(-50%)',
+                  width: 68, height: 10, borderRadius: 4,
+                  background: 'rgba(0,0,0,0.07)', border: '1px solid rgba(0,0,0,0.06)',
+                }} />
+              </div>
             </div>
-            {/* Trackpad */}
-            <div
-              className="absolute bottom-2 left-1/2 -translate-x-1/2 rounded"
-              style={{ width: '60px', height: '10px', background: 'rgba(0,0,0,0.09)', border: '1px solid rgba(0,0,0,0.08)' }}
-            />
           </div>
         </div>
 
-        {/* ── Floating +47% card ── */}
+        {/* ── Floating +47% card ── fades in after laptop opens */}
         <div
-          className="absolute -left-8 flex items-center gap-3 bg-white rounded-2xl px-4 py-3"
           style={{
-            top: '35%',
+            position: 'absolute', left: -32, top: '35%',
+            background: '#fff', borderRadius: 16, padding: '12px 16px',
+            display: 'flex', alignItems: 'center', gap: 12,
             boxShadow: '0 8px 30px rgba(99,65,184,0.15)',
-            animation: 'float 6s ease-in-out infinite',
+            opacity: 0,
+            animation: 'fade-in-card 0.8s ease 3.2s forwards, float 6s ease-in-out 4s infinite',
           }}
         >
-          <div className="w-8 h-8 rounded-xl flex items-center justify-center" style={{ background: 'rgba(99,65,184,0.1)' }}>
-            <svg className="w-4 h-4" viewBox="0 0 16 16" fill="none" style={{ color: '#6341B8' }}>
+          <div style={{ width: 32, height: 32, borderRadius: 10, background: 'rgba(99,65,184,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" style={{ color: '#6341B8' }}>
               <path d="M2 12l4-4 3 3 5-6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
           </div>
           <div>
-            <div className="text-sm font-black leading-none" style={{ color: '#1A0F3C' }}>+47%</div>
-            <div className="font-medium" style={{ fontSize: '10px', color: '#9B8EC4' }}>Visibilité locale</div>
+            <div style={{ fontSize: 14, fontWeight: 900, color: '#1A0F3C', lineHeight: 1 }}>+47%</div>
+            <div style={{ fontSize: 10, color: '#9B8EC4', fontWeight: 500, marginTop: 3 }}>Visibilité locale</div>
           </div>
         </div>
 
         {/* ── Floating SEO card ── */}
         <div
-          className="absolute -right-4 -bottom-6 bg-white rounded-2xl px-4 py-3"
           style={{
+            position: 'absolute', right: -16, bottom: -24,
+            background: '#fff', borderRadius: 16, padding: '12px 16px',
             boxShadow: '0 8px 30px rgba(99,65,184,0.12)',
-            animation: 'float 6s ease-in-out 1s infinite',
+            opacity: 0,
+            animation: 'fade-in-card 0.8s ease 3.6s forwards, float 6s ease-in-out 4.4s infinite',
           }}
         >
-          <div className="flex items-center gap-2 mb-1.5">
-            <svg className="w-3.5 h-3.5" viewBox="0 0 16 16" fill="none" style={{ color: '#6341B8' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 6 }}>
+            <svg width="13" height="13" viewBox="0 0 16 16" fill="none" style={{ color: '#6341B8' }}>
               <circle cx="7" cy="7" r="5" stroke="currentColor" strokeWidth="1.5" />
               <path d="M11 11l3 3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
             </svg>
-            <span className="font-black uppercase" style={{ fontSize: '10px', color: '#1A0F3C', letterSpacing: '0.05em' }}>SEO Score</span>
+            <span style={{ fontSize: 10, fontWeight: 900, color: '#1A0F3C', textTransform: 'uppercase', letterSpacing: '0.05em' }}>SEO Score</span>
           </div>
-          <div className="flex items-center gap-2">
-            <div className="rounded-full overflow-hidden" style={{ width: 80, height: 6, background: '#EDE8FF' }}>
-              <div className="h-full rounded-full" style={{ width: '80%', background: '#6341B8' }} />
+          <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+            <div style={{ width: 80, height: 6, borderRadius: 3, background: '#EDE8FF', overflow: 'hidden' }}>
+              <div style={{ width: '80%', height: '100%', borderRadius: 3, background: '#6341B8' }} />
             </div>
-            <span className="text-xs font-black" style={{ color: '#6341B8' }}>96</span>
+            <span style={{ fontSize: 12, fontWeight: 900, color: '#6341B8' }}>96</span>
           </div>
         </div>
 
         {/* ── 360° badge ── */}
         <div
-          className="absolute -top-3 -right-3 w-14 h-14 rounded-full flex flex-col items-center justify-center text-white"
-          style={{ background: '#6341B8', boxShadow: '0 8px 24px rgba(99,65,184,0.4)' }}
+          style={{
+            position: 'absolute', top: -12, right: -12,
+            width: 54, height: 54, borderRadius: '50%',
+            background: '#6341B8', boxShadow: '0 8px 24px rgba(99,65,184,0.45)',
+            display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
+            color: '#fff', opacity: 0,
+            animation: 'fade-in-card 0.6s ease 2.8s forwards',
+          }}
         >
-          <span className="text-xs font-black leading-none">360°</span>
-          <span className="font-bold opacity-70 uppercase" style={{ fontSize: '7px', letterSpacing: '0.05em' }}>Google</span>
+          <span style={{ fontSize: 12, fontWeight: 900, lineHeight: 1 }}>360°</span>
+          <span style={{ fontSize: 7, fontWeight: 700, opacity: 0.72, textTransform: 'uppercase', letterSpacing: '0.05em' }}>Google</span>
         </div>
       </div>
     </div>
@@ -232,7 +279,6 @@ export function Hero() {
       aria-label="Section principale"
       className="relative min-h-screen flex items-center overflow-hidden bg-white pt-16"
     >
-      {/* Soft background blobs */}
       <div
         aria-hidden="true"
         className="absolute top-0 right-0 w-[700px] h-[700px] rounded-full pointer-events-none"
@@ -261,29 +307,17 @@ export function Hero() {
               </Badge>
             </div>
 
-            {/* 3-line headline */}
             <h1 className="font-black uppercase tracking-tight leading-none mb-8">
-              <span
-                className="block text-ink whitespace-nowrap"
-                style={{ fontSize: 'clamp(1.8rem, 5.8vw, 4.5rem)', lineHeight: '1' }}
-              >
+              <span className="block text-ink whitespace-nowrap" style={{ fontSize: 'clamp(1.8rem, 5.8vw, 4.5rem)', lineHeight: '1' }}>
                 LE SITE WEB
               </span>
               <span
                 className="block whitespace-nowrap"
-                style={{
-                  fontSize: 'clamp(1.5rem, 4.2vw, 3.3rem)',
-                  lineHeight: '1.05',
-                  WebkitTextStroke: '2px #6341B8',
-                  color: 'transparent',
-                }}
+                style={{ fontSize: 'clamp(1.5rem, 4.2vw, 3.3rem)', lineHeight: '1.05', WebkitTextStroke: '2px #6341B8', color: 'transparent' }}
               >
                 QUI DONNE ENVIE
               </span>
-              <span
-                className="block text-purple whitespace-nowrap"
-                style={{ fontSize: 'clamp(1rem, 2.8vw, 2.2rem)', lineHeight: '1.1' }}
-              >
+              <span className="block text-purple whitespace-nowrap" style={{ fontSize: 'clamp(1rem, 2.8vw, 2.2rem)', lineHeight: '1.1' }}>
                 DE POUSSER VOTRE PORTE.
               </span>
             </h1>
@@ -305,7 +339,6 @@ export function Hero() {
               </Button>
             </div>
 
-            {/* Engagements */}
             <div className="mt-12 flex flex-wrap gap-8 border-t border-light-border pt-8">
               <div className="flex items-center gap-2">
                 <svg className="w-5 h-5 text-purple flex-shrink-0" viewBox="0 0 20 20" fill="none" aria-hidden="true">
@@ -331,12 +364,11 @@ export function Hero() {
             </div>
           </div>
 
-          {/* Right: MacBook animation */}
+          {/* Right: MacBook */}
           <MacbookIllustration />
         </div>
       </div>
 
-      {/* Scroll indicator */}
       <div aria-hidden="true" className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-40">
         <span className="text-xs text-ink-muted uppercase tracking-widest font-medium">Scroll</span>
         <div className="w-px h-12 bg-gradient-to-b from-purple/40 to-transparent" />

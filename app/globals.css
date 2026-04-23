@@ -152,10 +152,18 @@ body {
   to { transform: translateX(-50%); }
 }
 
-/* MacBook lid opening animation */
+/* MacBook lid: starts fully closed (back facing viewer), opens */
 @keyframes laptop-open {
-  0%, 15% { transform: rotateX(-78deg); }
-  100%     { transform: rotateX(-18deg); }
+  0%, 10%  { transform: rotateX(84deg); }
+  78%      { transform: rotateX(-24deg); }
+  90%      { transform: rotateX(-18deg); }
+  100%     { transform: rotateX(-20deg); }
+}
+
+/* Cards appear after laptop opens */
+@keyframes fade-in-card {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
 }
 
 /* Infinite scrolling website content */
