@@ -1,0 +1,36 @@
+-- ============================================================================
+-- Modèle à copier / compléter après avoir créé les 4 comptes dans
+-- Supabase → Authentication → Users (voir docs/CRM_SETUP.md).
+-- Remplace les <uuid-...> par l'UUID de chaque utilisateur Supabase Auth.
+-- ============================================================================
+
+-- 1. Profils --------------------------------------------------------------
+insert into public.profiles (id, full_name, email, role, avatar_color) values
+  ('<uuid-quentin>', 'Quentin', 'quentin@example.com', 'owner', '#6341B8'),
+  ('<uuid-arthur>', 'Arthur', 'arthur@example.com', 'owner', '#F4D03F'),
+  ('<uuid-telma>', 'Telma Martin', 'telma@example.com', 'alternant', '#FF3E8A'),
+  ('<uuid-enzo>', 'Enzo Mucci', 'enzo@example.com', 'alternant', '#C8F135');
+
+-- 2. Accès aux sociétés -----------------------------------------------------
+-- Quentin -> sa société uniquement
+insert into public.user_companies (user_id, company_id, is_default)
+select '<uuid-quentin>', id, true from public.companies where slug = 'quentin';
+
+-- Arthur -> sa société uniquement
+insert into public.user_companies (user_id, company_id, is_default)
+select '<uuid-arthur>', id, true from public.companies where slug = 'arthur';
+
+-- Telma -> les deux sociétés (bascule Quentin / Arthur)
+insert into public.user_companies (user_id, company_id, is_default)
+select '<uuid-telma>', id, (slug = 'quentin') from public.companies where slug in ('quentin', 'arthur');
+
+-- Enzo -> les deux sociétés (bascule Quentin / Arthur)
+insert into public.user_companies (user_id, company_id, is_default)
+select '<uuid-enzo>', id, (slug = 'quentin') from public.companies where slug in ('quentin', 'arthur');
+
+-- 3. Streaks initiales (facultatif, la table s'auto-alimente ensuite) --------
+insert into public.streaks (user_id, current_streak, longest_streak)
+values
+  ('<uuid-telma>', 0, 0),
+  ('<uuid-enzo>', 0, 0)
+on conflict (user_id) do nothing;

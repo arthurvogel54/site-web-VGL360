@@ -9,6 +9,17 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        crm: {
+          accent: '#FF6A13',
+          'accent-dark': '#E85A00',
+          'accent-light': '#FF8A42',
+          bg: '#FBF6F1',
+          card: '#FFFFFF',
+          border: '#EFE3D8',
+          ink: '#241C15',
+          muted: '#8A7B6C',
+          sidebar: '#FFFFFF',
+        },
         purple: {
           DEFAULT: '#6341B8',
           dark: '#4A2E8F',
